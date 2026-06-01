@@ -646,7 +646,7 @@ h3 .icon-arrow,
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  width: 20px;
+  width: 40px;
   height: 20px;
 }
 
@@ -2552,7 +2552,6 @@ input[type='checkbox'] {
 /* Header icons */
 .header__icons {
   display: flex;
-  gap: 20px;
   grid-area: icons;
   justify-self: end;
   padding-right: 0.8rem;
@@ -2594,8 +2593,8 @@ input[type='checkbox'] {
 }
 
 .header__icon .icon {
-  height: 2rem;
-  width: 2rem;
+  height: 20px;
+  width: 20px;
   fill: none;
   vertical-align: middle;
 }
@@ -2862,7 +2861,7 @@ details[open] > .header__submenu {
 .header__menu-item span {
   transition: text-decoration var(--duration-short) ease;
   font-size: 15px;
-  font-weight: 550;
+  font-weight: 500;
   color: #3a3a3a;
 }
 

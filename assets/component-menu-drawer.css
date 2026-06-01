@@ -75,7 +75,7 @@ details[open].menu-opening > .menu-drawer__submenu {
 
 @media screen and (min-width: 750px) {
   .menu-drawer {
-    width: 40rem;
+    width: 31rem;
     border-width: 0 var(--drawer-border-width) 0 0;
     border-style: solid;
     border-color: rgba(var(--color-foreground), var(--drawer-border-opacity));
@@ -110,9 +110,9 @@ details[open].menu-opening > .menu-drawer__submenu {
 }
 
 .menu-drawer__menu-item {
-  padding: 1.1rem 3rem;
+  padding: 1.1rem 2rem;
   text-decoration: none;
-  font-size: 1.4rem; /*  changed font size for hamburger*/
+  font-size: 18px; /*  changed font size for hamburger*/
 }
 
 .menu-drawer summary.menu-drawer__menu-item {
@@ -246,9 +246,9 @@ details[open].menu-opening > .menu-drawer__submenu {
   display: none;
 }
 
-.menu-drawer .list-social__link {
+/* .menu-drawer .list-social__link {
   padding: 1.1rem 1.1rem;
-}
+} */
 
 @media screen and (max-width: 749px) {
   .menu-drawer.country-selector-open {
