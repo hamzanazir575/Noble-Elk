@@ -2601,7 +2601,7 @@ input[type='checkbox'] {
 
 .header__icon,
 .header__icon--cart .icon {
-  height: 4.4rem;
+  /* height: 4.4rem; */
   width: 4.4rem;
   padding: 0;
 }
@@ -2863,6 +2863,7 @@ details[open] > .header__submenu {
   font-size: 15px;
   font-weight: 500;
   color: #3a3a3a;
+  text-transform: uppercase;
 }
 
 .header__menu-item:hover span {
@@ -2930,7 +2931,8 @@ details[open] > .header__menu-item .icon-caret {
   justify-content: space-between;
   padding: 20px 30px;
   font-size: 15px;
-  font-weight: 550;
+  font-weight: 600;
+  text-transform: capitalize;
 }
 
 .header__submenu .header__menu-item:hover {
