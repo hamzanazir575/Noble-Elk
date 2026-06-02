@@ -2793,6 +2793,10 @@ details[open] .modal-overlay::after {
     opacity 150ms ease;
 }
 
+.header__icon--menu .icon-close {
+  left: 52px;
+}
+
 details:not([open]) > .header__icon--menu .icon-close,
 details[open] > .header__icon--menu .icon-hamburger {
   visibility: hidden;
