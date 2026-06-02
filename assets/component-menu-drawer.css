@@ -212,8 +212,8 @@ details[open].menu-opening > .menu-drawer__submenu {
   display: inline-flex;
   align-items: center;
   text-decoration: none;
-  padding: 1rem 0;
-  font-size: 1.4rem;
+  padding: 0.78rem 0;
+  font-size: 1.08rem;
   color: rgb(var(--color-foreground));
   margin-bottom: 0;
 }
@@ -225,8 +225,8 @@ details[open].menu-opening > .menu-drawer__submenu {
 
 .menu-drawer__account account-icon > .svg-wrapper {
   height: 2rem;
-  width: 2rem;
-  margin-right: 1rem;
+  width: 1.54rem;
+  margin-right: 0.77rem;
 }
 
 .menu-drawer__account shop-user-avatar {
