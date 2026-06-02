@@ -2963,6 +2963,7 @@ details[open] > .header__menu-item .icon-caret {
 
 .header__menu-item .icon-caret {
   right: 0.8rem;
+  width: 10px;
 }
 
 .header__submenu .icon-caret {
