@@ -75,7 +75,7 @@ details[open].menu-opening > .menu-drawer__submenu {
 
 @media screen and (min-width: 750px) {
   .menu-drawer {
-    width: 31rem;
+    width: 30.8rem;
     border-width: 0 var(--drawer-border-width) 0 0;
     border-style: solid;
     border-color: rgba(var(--color-foreground), var(--drawer-border-opacity));
@@ -85,6 +85,7 @@ details[open].menu-opening > .menu-drawer__submenu {
 .menu-drawer__inner-container {
   position: relative;
   height: 100%;
+  text-transform: capitalize;
 }
 
 .menu-drawer__navigation-container {
@@ -96,7 +97,7 @@ details[open].menu-opening > .menu-drawer__submenu {
 }
 
 .menu-drawer__navigation {
-  padding: 3rem 0;
+  padding: 2.35rem 0;
 }
 
 .menu-drawer__inner-submenu {
@@ -110,7 +111,7 @@ details[open].menu-opening > .menu-drawer__submenu {
 }
 
 .menu-drawer__menu-item {
-  padding: 1.1rem 2rem;
+  padding: 0.85rem 2.3rem;
   text-decoration: none;
   font-size: 18px; /*  changed font size for hamburger*/
 }
@@ -140,7 +141,7 @@ details[open].menu-opening > .menu-drawer__submenu {
 .menu-drawer__menu-item > .svg-wrapper {
   width: 15px;
   position: absolute;
-  right: 3rem;
+  right: 2.3rem;
   top: 50%;
   transform: translateY(-50%);
 }
@@ -188,7 +189,7 @@ details[open].menu-opening > .menu-drawer__submenu {
 }
 
 .header--has-social .menu-drawer__utility-links {
-  padding: 2rem 3rem;
+  padding: 1.55rem 2.3rem;
 }
 
 @media screen and (max-width: 749px) {
@@ -240,7 +241,8 @@ details[open].menu-opening > .menu-drawer__submenu {
 
 .menu-drawer .list-social {
   justify-content: flex-start;
-  margin-left: -1.25rem;
+  margin-left: 1rem;
+  margin-bottom: 15px;
 }
 
 .menu-drawer .list-social:empty {
