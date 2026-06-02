@@ -2884,8 +2884,8 @@ details[open] > .header__submenu {
 
 .header__menu-item:hover span {
   /* text-decoration: underline; */
-  /* text-underline-offset: 0.3rem;
-  color: #005b22; */
+  /* text-underline-offset: 0.3rem;  */
+  color: #005b22;
 }
 
 details[open] > .header__menu-item {
@@ -3728,14 +3728,12 @@ details-disclosure > details {
   max-width: 60%;
 }
 
-/* Tablet */
 @media screen and (min-width: 769px) {
   .header__heading-logo {
     max-width: 80%;
   }
 }
 
-/* Desktop */
 @media screen and (min-width: 926px) {
   .header__heading-logo {
     max-width: 100%;
