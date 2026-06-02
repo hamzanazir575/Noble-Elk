@@ -241,7 +241,7 @@ details[open].menu-opening > .menu-drawer__submenu {
 
 .menu-drawer .list-social {
   justify-content: flex-start;
-  margin-left: 1rem;
+  margin-left: -0.5rem;
   margin-bottom: 15px;
 }
 
