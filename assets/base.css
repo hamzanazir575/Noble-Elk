@@ -3237,6 +3237,8 @@ details-disclosure > details {
 
 .rte > *:last-child {
   margin-bottom: 0;
+  color: #fff;
+  font-size: 1.2rem;
 }
 
 .rte table {
