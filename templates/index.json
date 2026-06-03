@@ -38,53 +38,15 @@
         "padding_bottom": 36
       }
     },
-    "image_banner_GrK8jN": {
-      "type": "image-banner",
-      "blocks": {
-        "heading_GaVWgE": {
-          "type": "heading",
-          "settings": {
-            "heading": "NOBLE BY NAME, QUALITY BY CHOICE.",
-            "heading_size": "hxl"
-          }
-        },
-        "text_6MEfWV": {
-          "type": "text",
-          "settings": {
-            "text": "Premium Elk Meat, Antler, and Supplements",
-            "text_style": "body"
-          }
-        },
-        "buttons_PiTE9i": {
-          "type": "buttons",
-          "settings": {
-            "button_label_1": "SHOP NOW",
-            "button_link_1": "shopify://collections/noble-elk-store",
-            "button_style_secondary_1": true,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
-          }
-        }
-      },
-      "block_order": [
-        "heading_GaVWgE",
-        "text_6MEfWV",
-        "buttons_PiTE9i"
-      ],
-      "name": "t:sections.image-banner.presets.name",
+    "custom_section_qpGRbR": {
+      "type": "custom-section",
+      "name": "Custom Hero Banner",
       "settings": {
-        "image": "shopify://shop_images/noble-elk-bull.webp",
-        "image_overlay_opacity": 40,
-        "image_height": "medium",
-        "image_behavior": "none",
-        "desktop_content_position": "middle-center",
-        "desktop_content_alignment": "center",
-        "show_text_box": false,
-        "color_scheme": "scheme-5",
-        "stack_images_on_mobile": true,
-        "mobile_content_alignment": "center",
-        "show_text_below": true
+        "hero_image": "shopify://shop_images/noble-elk-bull.webp",
+        "heading": "NOBLE BY NAME, QUALITY BY CHOICE.",
+        "text": "Premium Elk Meat, Antler, and Supplements",
+        "button_label": "SHOP NOW",
+        "button_link": "shopify://products/elk-meat"
       }
     },
     "17793688857c1e50cd": {
@@ -490,7 +452,7 @@
   },
   "order": [
     "featured_collection",
-    "image_banner_GrK8jN",
+    "custom_section_qpGRbR",
     "17793688857c1e50cd",
     "image_with_text_eV7iEY",
     "featured_collection_rHhACr",
