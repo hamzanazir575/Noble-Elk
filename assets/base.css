@@ -284,12 +284,14 @@ h5,
 
 .hxl {
   font-size: calc(var(--font-heading-scale) * 5rem);
-  line-height: calc(1 + 0.3 / max(1, var(--font-heading-scale)));
+  /* line-height: calc(1 + 0.3 / max(1, var(--font-heading-scale))); */
+  line-height: 1.2;
 }
 
 @media only screen and (min-width: 750px) {
   .hxl {
-    font-size: calc(var(--font-heading-scale) * 6.2rem);
+    /* font-size: calc(var(--font-heading-scale) * 5.6rem); */
+    font-size: 61px;
   }
 }
 
@@ -478,7 +480,7 @@ table:not([class]) th {
 a:empty,
 ul:empty,
 dl:empty,
-div:empty,
+/* div:empty, */
 section:empty,
 article:empty,
 p:empty,
@@ -3246,7 +3248,7 @@ details-disclosure > details {
 .rte > *:last-child {
   margin-bottom: 32px;
   color: #fff;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
 }
 
 .rte table {
