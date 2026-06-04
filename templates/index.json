@@ -45,7 +45,7 @@
         "hero_image": "shopify://shop_images/noble-elk-bull_6005472e-4201-4c47-bcc4-505dba288c95.webp",
         "heading": "NOBLE BY NAME, QUALITY BY CHOICE.",
         "text": "Premium Elk Meat, Antler, and Supplements",
-        "button_label": "SHOP NOW",
+        "button_label": "shop now",
         "button_link": "shopify://products/elk-meat"
       }
     },
@@ -92,6 +92,9 @@
         "caption_Af3fLp",
         "text_mKVCk6",
         "button_qVAnHQ"
+      ],
+      "custom_css": [
+        ".page-width {padding: 0;}"
       ],
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
