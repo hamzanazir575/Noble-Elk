@@ -38,54 +38,6 @@
         "padding_bottom": 36
       }
     },
-    "image_with_text_ALreh7": {
-      "type": "image-with-text",
-      "blocks": {
-        "heading_nrmdHV": {
-          "type": "heading",
-          "settings": {
-            "heading": "FOR PEOPLE AND PETS",
-            "heading_size": "h1"
-          }
-        },
-        "text_3r7hyA": {
-          "type": "text",
-          "settings": {
-            "text": "<p>All-natural elk antler dog chews, freeze-dried elk treats, and velvet antler hip+joint supplements</p>",
-            "text_style": "body"
-          }
-        },
-        "button_L7J4qB": {
-          "type": "button",
-          "settings": {
-            "button_label": "Pet Products",
-            "button_link": "shopify://products/elk-organ-freeze-dried-pet-treats-3-oz-pack",
-            "button_style_secondary": false
-          }
-        }
-      },
-      "block_order": [
-        "heading_nrmdHV",
-        "text_3r7hyA",
-        "button_L7J4qB"
-      ],
-      "name": "t:sections.image-with-text.presets.name",
-      "settings": {
-        "image": "shopify://shop_images/doggy.webp",
-        "height": "large",
-        "desktop_image_width": "medium",
-        "layout": "image_first",
-        "image_behavior": "none",
-        "content_layout": "no-overlap",
-        "desktop_content_position": "middle",
-        "desktop_content_alignment": "left",
-        "mobile_content_alignment": "left",
-        "section_color_scheme": "scheme-d46f811d-9853-423b-9c13-f308916bcf74",
-        "color_scheme": "scheme-d46f811d-9853-423b-9c13-f308916bcf74",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
     "custom_section_qpGRbR": {
       "type": "custom-section",
       "name": "Custom Hero Banner",
@@ -506,7 +458,6 @@
   },
   "order": [
     "featured_collection",
-    "image_with_text_ALreh7",
     "custom_section_qpGRbR",
     "17793688857c1e50cd",
     "image_with_text_eV7iEY",
