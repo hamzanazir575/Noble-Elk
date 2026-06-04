@@ -1,12 +1,9 @@
 <style>
 
-  .page-width {
-    padding: 0;
-  }
-
   .custom-hero-banner {
     position: relative;
     width: 100%;
+    min-height: 356px;
     overflow: hidden;
     display: flex;
     align-items: center;
@@ -76,8 +73,12 @@
 
   @media screen and (min-width: 768px) {
 
+    .custom-hero-banner {
+      min-height: 621px;
+    }
+
     .custom-hero-banner__content {
-      padding: 162px 20px 80px;
+      padding: 45px 20px 80px;
     }
 
     .custom-hero-banner__heading {
@@ -95,40 +96,38 @@
 
 </style>
 
-<div class="page-width">
-  <div class="custom-hero-banner">
-    {% if section.settings.hero_image != blank %}
-      <img
-        class="custom-hero-banner__image"
-        src="{{ section.settings.hero_image | image_url: width: 1920 }}"
-        width="1920"
-        height="1280"
-        loading="lazy"
-        alt="Elk with large antlers in a grassy field with cornfield in the background">
-    {% else %}
-      {{ 'product-1' | placeholder_svg_tag }}
+<div class="custom-hero-banner">
+  {% if section.settings.hero_image != blank %}
+    <img
+      class="custom-hero-banner__image"
+      src="{{ section.settings.hero_image | image_url: width: 1920 }}"
+      width="1920"
+      height="1280"
+      loading="lazy"
+      alt="Elk with large antlers in a grassy field with cornfield in the background">
+  {% else %}
+    {{ 'product-1' | placeholder_svg_tag }}
+  {% endif %}
+
+
+  <div class="custom-hero-banner__content page-width">
+    {% if section.settings.heading != blank %}
+      <h1 class="custom-hero-banner__heading">
+        {{ section.settings.heading }}
+      </h1>
     {% endif %}
 
+    {% if section.settings.text != blank %}
+      <p class="custom-hero-banner__text">
+        {{ section.settings.text }}
+      </p>
+    {% endif %}
 
-    <div class="custom-hero-banner__content page-width">
-      {% if section.settings.heading != blank %}
-        <h1 class="custom-hero-banner__heading">
-          {{ section.settings.heading }}
-        </h1>
-      {% endif %}
-
-      {% if section.settings.text != blank %}
-        <p class="custom-hero-banner__text">
-          {{ section.settings.text }}
-        </p>
-      {% endif %}
-
-      {% if section.settings.button_label != blank and section.settings.button_link != blank %}
-        <a href="{{ section.settings.button_link }}" class="custom-hero-banner__button">
-          {{ section.settings.button_label }}
-        </a>
-      {% endif %}
-    </div>
+    {% if section.settings.button_label != blank and section.settings.button_link != blank %}
+      <a href="{{ section.settings.button_link }}" class="custom-hero-banner__button">
+        {{ section.settings.button_label }}
+      </a>
+    {% endif %}
   </div>
 </div>
 
@@ -177,7 +176,3 @@
     ]
   }
 {% endschema %}
-
-
-{% comment %} Make the page-width the first child of parent {% endcomment %}
-{% comment %} Dont remove padding from page-width as it will cause issues on mobile {% endcomment %}
