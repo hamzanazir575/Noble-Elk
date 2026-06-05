@@ -6,10 +6,6 @@
     justify-content: space-between;
   }
 
-  .card {
-    flex: 1;
-  }
-
   .card-image {
     text-align: center;
   }
@@ -30,10 +26,21 @@
     letter-spacing: 0.6px;
   }
 
-  @media screen and (max-width: 910px) {
+  @media screen and (max-width: 988px) {
     .card-container {
       flex-wrap: wrap;
       justify-content: flex-start;
+    }
+
+    .card {
+      flex: 1 1 180px;
+    }
+  }
+
+  @media screen and (max-width: 488px) {
+    .card-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
     }
   }
 </style>
