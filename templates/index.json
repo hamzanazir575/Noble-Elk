@@ -49,6 +49,55 @@
         "button_link": "shopify://products/elk-meat"
       }
     },
+    "custom_column_3HXVAx": {
+      "type": "custom-column",
+      "blocks": {
+        "card_4UAdNQ": {
+          "type": "card",
+          "settings": {
+            "card_image": "shopify://shop_images/elk_farm.svg",
+            "text": "PASTURE RAISED ELK FROM THE USA"
+          }
+        },
+        "card_eeVFVm": {
+          "type": "card",
+          "settings": {
+            "card_image": "shopify://shop_images/syringe.svg",
+            "text": "NO HORMONES AND NO ANTIBITOICS"
+          }
+        },
+        "card_YTJg4F": {
+          "type": "card",
+          "settings": {
+            "card_image": "shopify://shop_images/4.svg",
+            "text": "FDA AND USDA INSPECTED"
+          }
+        },
+        "card_jjWF9Y": {
+          "type": "card",
+          "settings": {
+            "card_image": "shopify://shop_images/5.svg",
+            "text": "GMP COMPLIANT FACILITY"
+          }
+        },
+        "card_XLNtLd": {
+          "type": "card",
+          "settings": {
+            "card_image": "shopify://shop_images/usa.svg",
+            "text": "VETERAN OWNED AMERICA FIRST"
+          }
+        }
+      },
+      "block_order": [
+        "card_4UAdNQ",
+        "card_eeVFVm",
+        "card_YTJg4F",
+        "card_jjWF9Y",
+        "card_XLNtLd"
+      ],
+      "name": "Custom Column Section",
+      "settings": {}
+    },
     "17793688857c1e50cd": {
       "type": "_blocks",
       "settings": {}
@@ -462,6 +511,7 @@
   "order": [
     "featured_collection",
     "custom_section_qpGRbR",
+    "custom_column_3HXVAx",
     "17793688857c1e50cd",
     "image_with_text_eV7iEY",
     "featured_collection_rHhACr",
