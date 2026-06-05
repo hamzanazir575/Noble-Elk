@@ -1,0 +1,115 @@
+<style>
+  .card-container {
+    padding-inline: 20px;
+    display: flex;
+    gap: 30px;
+    justify-content: space-between;
+  }
+
+  .card {
+    flex: 1;
+  }
+
+  .card-image {
+    text-align: center;
+  }
+
+  .card-image img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 6px;
+  }
+
+  .card-text {
+    margin-block: 14px;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #121212;
+    line-height: 1.5;
+    font-weight: 400;
+    letter-spacing: 0.6px;
+  }
+
+  @media screen and (max-width: 910px) {
+    .card-container {
+      flex-wrap: wrap;
+      justify-content: flex-start;
+    }
+  }
+</style>
+
+<div class="card-container">
+  {% for block in section.blocks %}
+    <div class="card" {{ block.shopify_attributes }}>
+      <div class="card-image">
+
+        {% if block.settings.card_image != blank %}
+          <img
+            src="{{ block.settings.card_image | image_url: width: 60 }}"
+            width="60"
+            height="60"
+            loading="lazy"
+            alt="{{ block.settings.text }}">
+        {% else %}
+          {{ 'product-1' | placeholder_svg_tag }}
+        {% endif %}
+
+        {% if block.settings.text != blank %}
+          <p class="card-text">
+            {{ block.settings.text }}
+          </p>
+        {% endif %}
+
+      </div>
+    </div>
+  {% endfor %}
+</div>
+
+{% schema %}
+  {
+    "name": "Custom Column Section",
+    "tag": "section",
+    "class": "section",
+
+    "blocks": [
+      {
+        "type": "card",
+        "name": "Card",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "card_image",
+            "label": "Card Image"
+          }, {
+            "type": "text",
+            "id": "text",
+            "label": "Card Text",
+            "default": "Write your text"
+          }
+        ]
+      }
+    ],
+
+    "presets": [
+      {
+        "name": "Custom Column Section",
+        "blocks": [
+          {
+            "type": "card"
+          },
+          {
+            "type": "card"
+          },
+          {
+            "type": "card"
+          },
+          {
+            "type": "card"
+          }, {
+            "type": "card"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}
