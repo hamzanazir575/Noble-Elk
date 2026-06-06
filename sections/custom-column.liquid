@@ -1,13 +1,13 @@
 <style>
   .card-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     padding-inline: 20px;
-    display: flex;
-    gap: 30px;
-    justify-content: space-between;
+    gap: 15px;
   }
 
   .card {
-    flex: 1;
+    flex: 1 1 180px;
   }
 
   .card-image {
@@ -30,21 +30,23 @@
     letter-spacing: 0.6px;
   }
 
-  @media screen and (max-width: 988px) {
+  @media screen and (min-width: 988px) {
     .card-container {
-      flex-wrap: wrap;
-      justify-content: flex-start;
+      padding-inline: 20px;
+      display: flex;
+      gap: 30px;
+      justify-content: space-between;
     }
 
     .card {
-      flex: 1 1 180px;
+      flex: 1;
     }
   }
 
-  @media screen and (max-width: 488px) {
+  @media screen and (min-width: 488px) {
     .card-container {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
+      flex-wrap: wrap;
+      justify-content: flex-start;
     }
   }
 </style>
