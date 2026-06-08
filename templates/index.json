@@ -56,56 +56,35 @@
           "type": "card",
           "settings": {
             "card_image": "shopify://shop_images/elk_farm.svg",
-            "text": "PASTURE RAISED ELK FROM THE USA"
+            "text": "pasture raised elk from the usa"
           }
         },
         "card_tBDx3t": {
           "type": "card",
           "settings": {
             "card_image": "shopify://shop_images/syringe.svg",
-            "text": "NO HORMONES AND NO ANTIBITOICS"
+            "text": "no hormones and no antibiotics"
           }
         },
         "card_i6R86C": {
           "type": "card",
           "settings": {
             "card_image": "shopify://shop_images/4.svg",
-            "text": "FDA AND USDA INSPECTED"
+            "text": "fda and usda inspected"
           }
         },
         "card_K6xYDV": {
           "type": "card",
           "settings": {
             "card_image": "shopify://shop_images/5.svg",
-            "text": "GMP COMPLIANT FACILITY"
-          }
-        },
-        "card_fCUBgG": {
-          "type": "card",
-          "settings": {
-            "card_image": "shopify://shop_images/usa.svg",
-            "text": "VETERAN OWNED AMERICA FIRST"
+            "text": "gmp compliant facility"
           }
         },
         "card_rwGE4B": {
           "type": "card",
           "settings": {
             "card_image": "shopify://shop_images/usa.svg",
-            "text": "VETERAN OWNED AMERICA FIRST"
-          }
-        },
-        "card_AqhT3R": {
-          "type": "card",
-          "settings": {
-            "card_image": "shopify://shop_images/usa.svg",
-            "text": "VETERAN OWNED AMERICA FIRST"
-          }
-        },
-        "card_dFjwLf": {
-          "type": "card",
-          "settings": {
-            "card_image": "shopify://shop_images/usa.svg",
-            "text": "VETERAN OWNED AMERICA FIRST"
+            "text": "veteran owned america first"
           }
         }
       },
@@ -114,10 +93,7 @@
         "card_tBDx3t",
         "card_i6R86C",
         "card_K6xYDV",
-        "card_fCUBgG",
-        "card_rwGE4B",
-        "card_AqhT3R",
-        "card_dFjwLf"
+        "card_rwGE4B"
       ],
       "name": "Custom Column Section",
       "settings": {}
