@@ -49,15 +49,6 @@
         "button_link": "shopify://products/elk-meat"
       }
     },
-    "custom_column_4E4MGg": {
-      "type": "logo-with-text",
-      "name": "Custom Column Section",
-      "settings": {}
-    },
-    "17793688857c1e50cd": {
-      "type": "_blocks",
-      "settings": {}
-    },
     "custom_column_V8e7kb": {
       "type": "logo-with-text",
       "blocks": {
@@ -469,8 +460,6 @@
   "order": [
     "featured_collection",
     "custom_section_qpGRbR",
-    "custom_column_4E4MGg",
-    "17793688857c1e50cd",
     "custom_column_V8e7kb",
     "custom_image_with_text_iViJJx",
     "featured_collection_rHhACr",
