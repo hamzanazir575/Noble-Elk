@@ -5,11 +5,7 @@
     grid-template-columns: repeat(3, 1fr);
     padding-inline: 20px;
     gap: 15px;
-    max-width: 100%;
-  }
-
-  .card__inner {
-    flex: 1 1 180px;
+    width: 100%;
   }
 
   .card__image {
@@ -22,7 +18,7 @@
     margin-bottom: 6px;
   }
 
-  .card-text {
+  .card__text {
     margin-block: 14px;
     font-size: 14px;
     text-transform: uppercase;
@@ -59,7 +55,7 @@
           {% endif %}
 
           {% if block.settings.text != blank %}
-            <p class="card-text">
+            <p class="card__text">
               {{ block.settings.text }}
             </p>
           {% endif %}
