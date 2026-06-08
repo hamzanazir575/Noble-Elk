@@ -51,37 +51,46 @@
     },
     "custom_column_4E4MGg": {
       "type": "custom-column",
+      "name": "Custom Column Section",
+      "settings": {}
+    },
+    "17793688857c1e50cd": {
+      "type": "_blocks",
+      "settings": {}
+    },
+    "custom_column_V8e7kb": {
+      "type": "custom-column",
       "blocks": {
-        "card_V9QB9w": {
-          "type": "card",
+        "logo_kTyMni": {
+          "type": "logo",
           "settings": {
             "card_image": "shopify://shop_images/elk_farm.svg",
-            "text": "pasture raised elk from the usa"
+            "text": "pasture raised elk from usa"
           }
         },
-        "card_tBDx3t": {
-          "type": "card",
+        "logo_TLQJCE": {
+          "type": "logo",
           "settings": {
             "card_image": "shopify://shop_images/syringe.svg",
-            "text": "no hormones and no antibiotics"
+            "text": "no hormones and antibiotics"
           }
         },
-        "card_i6R86C": {
-          "type": "card",
+        "logo_kVMjNU": {
+          "type": "logo",
           "settings": {
             "card_image": "shopify://shop_images/4.svg",
             "text": "fda and usda inspected"
           }
         },
-        "card_K6xYDV": {
-          "type": "card",
+        "logo_xeAYCy": {
+          "type": "logo",
           "settings": {
             "card_image": "shopify://shop_images/5.svg",
             "text": "gmp compliant facility"
           }
         },
-        "card_rwGE4B": {
-          "type": "card",
+        "logo_rWWfAi": {
+          "type": "logo",
           "settings": {
             "card_image": "shopify://shop_images/usa.svg",
             "text": "veteran owned america first"
@@ -89,17 +98,13 @@
         }
       },
       "block_order": [
-        "card_V9QB9w",
-        "card_tBDx3t",
-        "card_i6R86C",
-        "card_K6xYDV",
-        "card_rwGE4B"
+        "logo_kTyMni",
+        "logo_TLQJCE",
+        "logo_kVMjNU",
+        "logo_xeAYCy",
+        "logo_rWWfAi"
       ],
-      "name": "Custom Column Section",
-      "settings": {}
-    },
-    "17793688857c1e50cd": {
-      "type": "_blocks",
+      "name": "Logo With Text",
       "settings": {}
     },
     "custom_image_with_text_iViJJx": {
@@ -466,6 +471,7 @@
     "custom_section_qpGRbR",
     "custom_column_4E4MGg",
     "17793688857c1e50cd",
+    "custom_column_V8e7kb",
     "custom_image_with_text_iViJJx",
     "featured_collection_rHhACr",
     "image_with_text_y6YxEi",
