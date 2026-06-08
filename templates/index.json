@@ -86,6 +86,27 @@
             "card_image": "shopify://shop_images/usa.svg",
             "text": "VETERAN OWNED AMERICA FIRST"
           }
+        },
+        "card_rwGE4B": {
+          "type": "card",
+          "settings": {
+            "card_image": "shopify://shop_images/usa.svg",
+            "text": "VETERAN OWNED AMERICA FIRST"
+          }
+        },
+        "card_AqhT3R": {
+          "type": "card",
+          "settings": {
+            "card_image": "shopify://shop_images/usa.svg",
+            "text": "VETERAN OWNED AMERICA FIRST"
+          }
+        },
+        "card_dFjwLf": {
+          "type": "card",
+          "settings": {
+            "card_image": "shopify://shop_images/usa.svg",
+            "text": "VETERAN OWNED AMERICA FIRST"
+          }
         }
       },
       "block_order": [
@@ -93,7 +114,10 @@
         "card_tBDx3t",
         "card_i6R86C",
         "card_K6xYDV",
-        "card_fCUBgG"
+        "card_fCUBgG",
+        "card_rwGE4B",
+        "card_AqhT3R",
+        "card_dFjwLf"
       ],
       "name": "Custom Column Section",
       "settings": {}
