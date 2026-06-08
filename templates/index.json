@@ -49,38 +49,38 @@
         "button_link": "shopify://products/elk-meat"
       }
     },
-    "custom_column_3HXVAx": {
+    "custom_column_4E4MGg": {
       "type": "custom-column",
       "blocks": {
-        "card_4UAdNQ": {
+        "card_V9QB9w": {
           "type": "card",
           "settings": {
             "card_image": "shopify://shop_images/elk_farm.svg",
             "text": "PASTURE RAISED ELK FROM THE USA"
           }
         },
-        "card_eeVFVm": {
+        "card_tBDx3t": {
           "type": "card",
           "settings": {
             "card_image": "shopify://shop_images/syringe.svg",
             "text": "NO HORMONES AND NO ANTIBITOICS"
           }
         },
-        "card_YTJg4F": {
+        "card_i6R86C": {
           "type": "card",
           "settings": {
             "card_image": "shopify://shop_images/4.svg",
             "text": "FDA AND USDA INSPECTED"
           }
         },
-        "card_jjWF9Y": {
+        "card_K6xYDV": {
           "type": "card",
           "settings": {
             "card_image": "shopify://shop_images/5.svg",
             "text": "GMP COMPLIANT FACILITY"
           }
         },
-        "card_XLNtLd": {
+        "card_fCUBgG": {
           "type": "card",
           "settings": {
             "card_image": "shopify://shop_images/usa.svg",
@@ -89,11 +89,11 @@
         }
       },
       "block_order": [
-        "card_4UAdNQ",
-        "card_eeVFVm",
-        "card_YTJg4F",
-        "card_jjWF9Y",
-        "card_XLNtLd"
+        "card_V9QB9w",
+        "card_tBDx3t",
+        "card_i6R86C",
+        "card_K6xYDV",
+        "card_fCUBgG"
       ],
       "name": "Custom Column Section",
       "settings": {}
@@ -464,7 +464,7 @@
   "order": [
     "featured_collection",
     "custom_section_qpGRbR",
-    "custom_column_3HXVAx",
+    "custom_column_4E4MGg",
     "17793688857c1e50cd",
     "custom_image_with_text_iViJJx",
     "featured_collection_rHhACr",
