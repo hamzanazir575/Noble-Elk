@@ -100,7 +100,7 @@
     },
     "custom_image_with_text_iViJJx": {
       "type": "custom-image-with-text",
-      "name": "Custom Product Feature With Text",
+      "name": "Featured Product With Text",
       "settings": {
         "image": "shopify://shop_images/elkorgan.webp",
         "badge": "NEW RELEASE",
