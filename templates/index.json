@@ -102,64 +102,17 @@
       "type": "_blocks",
       "settings": {}
     },
-    "image_with_text_eV7iEY": {
-      "type": "image-with-text",
-      "blocks": {
-        "heading_FJHkym": {
-          "type": "heading",
-          "settings": {
-            "heading": "Freeze-Dried Elk Organ Treats",
-            "heading_size": "h2"
-          }
-        },
-        "caption_Af3fLp": {
-          "type": "caption",
-          "settings": {
-            "caption": "From Our Herd To Your Pack",
-            "text_style": "caption-with-letter-spacing",
-            "text_size": "medium"
-          }
-        },
-        "text_mKVCk6": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Made from 100% farm-raised elk organs. Freeze-dried to preserve natural flavor and nutrients, these primal treats deliver an exciting alternative to everyday dog snacks. Clean, powerful nutrition your dog instinctively craves.</p>",
-            "text_style": "body"
-          }
-        },
-        "button_qVAnHQ": {
-          "type": "button",
-          "settings": {
-            "button_label": "Buy Now",
-            "button_link": "shopify://products/elk-organ-freeze-dried-pet-treats-3-oz-pack",
-            "button_style_secondary": false
-          }
-        }
-      },
-      "block_order": [
-        "heading_FJHkym",
-        "caption_Af3fLp",
-        "text_mKVCk6",
-        "button_qVAnHQ"
-      ],
-      "custom_css": [
-        ".page-width {padding: 0;}"
-      ],
-      "name": "t:sections.image-with-text.presets.name",
+    "custom_image_with_text_iViJJx": {
+      "type": "custom-image-with-text",
+      "name": "Custom Product Feature With Text",
       "settings": {
         "image": "shopify://shop_images/elkorgan.webp",
-        "height": "medium",
-        "desktop_image_width": "medium",
-        "layout": "image_first",
-        "image_behavior": "none",
-        "content_layout": "no-overlap",
-        "desktop_content_position": "top",
-        "desktop_content_alignment": "left",
-        "mobile_content_alignment": "left",
-        "section_color_scheme": "scheme-8236fe17-f5c8-42f3-84e1-5e2ad6cae4d8",
-        "color_scheme": "scheme-8236fe17-f5c8-42f3-84e1-5e2ad6cae4d8",
-        "padding_top": 0,
-        "padding_bottom": 0
+        "badge": "NEW RELEASE",
+        "heading": "Freeze-Dried Elk Organ Treats",
+        "subheading": "From Our Herd to your Pack",
+        "description": "<p>Made from 100% farm-raised elk organs. Freeze-dried to preserve natural flavor and nutrients, these primal treats deliver an exciting alternative to everyday dog snacks.</p>",
+        "button_label": "Buy Now",
+        "button_link": "shopify://products/antler-chews"
       }
     },
     "featured_collection_rHhACr": {
@@ -513,7 +466,7 @@
     "custom_section_qpGRbR",
     "custom_column_3HXVAx",
     "17793688857c1e50cd",
-    "image_with_text_eV7iEY",
+    "custom_image_with_text_iViJJx",
     "featured_collection_rHhACr",
     "image_with_text_y6YxEi",
     "rich_text_3hR7eH",
