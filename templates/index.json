@@ -40,7 +40,7 @@
     },
     "custom_section_qpGRbR": {
       "type": "custom-section",
-      "name": "Custom Hero Banner",
+      "name": "Hero Banner",
       "settings": {
         "hero_image": "shopify://shop_images/noble-elk-bull_6005472e-4201-4c47-bcc4-505dba288c95.webp",
         "heading": "NOBLE BY NAME, QUALITY BY CHOICE.",
@@ -175,7 +175,11 @@
           }
         }
       },
-      "block_order": ["heading_N3dRLP", "text_AdeaDt", "button_GNh9eq"],
+      "block_order": [
+        "heading_N3dRLP",
+        "text_AdeaDt",
+        "button_GNh9eq"
+      ],
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
         "image": "shopify://shop_images/huge_deer.webp",
@@ -203,7 +207,9 @@
           }
         }
       },
-      "block_order": ["text_mqpqYK"],
+      "block_order": [
+        "text_mqpqYK"
+      ],
       "name": "t:sections.rich-text.presets.name",
       "settings": {
         "desktop_content_position": "center",
@@ -245,7 +251,11 @@
           }
         }
       },
-      "block_order": ["column_B9eRPL", "column_wJJF4Y", "column_CKpxPf"],
+      "block_order": [
+        "column_B9eRPL",
+        "column_wJJF4Y",
+        "column_CKpxPf"
+      ],
       "name": "t:sections.multicolumn.presets.name",
       "settings": {
         "title": "",
@@ -290,7 +300,11 @@
           }
         }
       },
-      "block_order": ["heading_GM8MLq", "text_Yc7MfA", "button_WgnJTU"],
+      "block_order": [
+        "heading_GM8MLq",
+        "text_Yc7MfA",
+        "button_WgnJTU"
+      ],
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
         "image": "shopify://shop_images/elk-cow-calf-5.webp",
@@ -319,7 +333,9 @@
           "blocks": {}
         }
       },
-      "block_order": ["ai_gen_block_9ba3918_YCyCDE"],
+      "block_order": [
+        "ai_gen_block_9ba3918_YCyCDE"
+      ],
       "settings": {}
     },
     "collapsible_content_zLfgNL": {
@@ -433,7 +449,10 @@
           }
         }
       },
-      "block_order": ["slide_d3BGXn", "slide_jFQADJ"],
+      "block_order": [
+        "slide_d3BGXn",
+        "slide_jFQADJ"
+      ],
       "name": "t:sections.slideshow.presets.name",
       "settings": {
         "layout": "full_bleed",
