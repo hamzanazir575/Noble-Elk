@@ -2,7 +2,7 @@
 
   .card__container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     padding-inline: 20px;
     gap: 15px;
     width: 100%;
@@ -28,14 +28,20 @@
     letter-spacing: 0.6px;
   }
 
+  @media screen and (min-width: 749px) {
+    .card__container {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
   @media screen and (min-width: 988px) {
     .card__container {
-      padding-inline: 20px;
-      display: grid;
       grid-template-columns: repeat(5, 1fr);
       gap: 30px;
     }
+
   }
+
 </style>
 <div class="card">
   <div class="card__container">
