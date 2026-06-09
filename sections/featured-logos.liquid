@@ -21,7 +21,7 @@
   }
 
   .featured-logo__text {
-    margin-block: 10px 30px;
+    margin-block: 30px 10px;
     font-size: 14px;
     text-transform: uppercase;
     color: #121212;
@@ -51,14 +51,16 @@
             loading="lazy"
             alt="{{ block.settings.text }}">
         {% else %}
-          {{ 'product-1' | placeholder_svg_tag }}
+          {{ 'product-1' | placeholder_svg_tag: 'featured-logo__placeholder' }}
         {% endif %}
+
       </div>
       {% if block.settings.text != blank %}
         <p class="featured-logo__text">
           {{ block.settings.text }}
         </p>
       {% endif %}
+      
     </div>
   {% endfor %}
 </div>
@@ -78,7 +80,8 @@
             "type": "image_picker",
             "id": "card_image",
             "label": "Logo"
-          }, {
+          },
+          {
             "type": "text",
             "id": "text",
             "label": "Description",
@@ -103,7 +106,8 @@
           },
           {
             "type": "logo"
-          }, {
+          },
+          {
             "type": "logo"
           }
         ]
