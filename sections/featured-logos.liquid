@@ -12,6 +12,7 @@
     margin: 0 auto;
     width: 60px;
     height: 60px;
+    margin-bottom: 15px;
   }
 
   .featured-logo__image img {
@@ -20,7 +21,7 @@
   }
 
   .featured-logo__text {
-    margin-block: 30px 10px;
+    margin-block: 14px;
     font-size: 14px;
     text-transform: uppercase;
     color: #121212;
@@ -58,9 +59,11 @@
 
       </div>
       {% if block.settings.text != blank %}
-        <p class="featured-logo__text">
-          {{ block.settings.text }}
-        </p>
+        <div>
+          <p class="featured-logo__text">
+            {{ block.settings.text }}
+          </p>
+        </div>
       {% endif %}
 
     </div>
