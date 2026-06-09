@@ -3,7 +3,6 @@
   .product-feature__container {
     display: flex;
     flex-direction: column;
-    text-align: center;
     align-items: center;
     justify-content: space-between;
     gap: 30px;
@@ -20,7 +19,7 @@
     justify-content: center;
     flex-direction: column;
     gap: 16px;
-    padding: 40px;
+    padding: 30px;
   }
 
   .product-feature__image {
@@ -35,17 +34,16 @@
     width: fit-content;
     background: #121212;
     color: #fff;
-    padding: 6px 12px;
-    font-size: 12px;
+    padding: 8px 12px;
+    font-size: 20px;
     font-weight: 600;
     border-radius: 4px;
     letter-spacing: 0.5px;
     text-transform: uppercase;
-    margin-inline: auto;
   }
 
   .product-feature__heading {
-    font-size: 2.8rem;
+    font-size: 28px;
     line-height: 1.2;
     color: #121212;
     font-weight: 400;
@@ -53,19 +51,19 @@
   }
 
   .product-feature__subheading {
-    font-size: 1.8rem;
     font-weight: bolder;
     color: #121212;
     line-height: 1.6;
-    margin-block: 16px;
+    /* margin-block: 16px; */
+    margin-top: 16px;
+    margin-bottom: 10px;
   }
 
   .product-feature__description {
-    font-size: 1.5rem;
+    font-size: 16px;
     line-height: 1.6;
     letter-spacing: 0.6px;
     color: #121212;
-    letter-spacing: 0.4px;
   }
 
   .product-feature__button {
@@ -94,8 +92,11 @@
       gap: 40px;
     }
 
+    .product-feature__content-column {
+      padding: 40px;
+    }
+
     .product-feature__badge {
-      font-size: 20px;
       margin-inline: 0;
     }
 
@@ -119,7 +120,7 @@
   <div class="product-feature__image-column">
     {% if section.settings.image != blank %}
       <img
-        src="{{ section.settings.image | image_url: width: 1200 }}"
+        src="{{ section.settings.image | image_url: width: block.settings.image.width }}"
         width="4000"
         height="4000"
         alt="{{ section.settings.heading | escape }}"
@@ -184,7 +185,7 @@
         "type": "text",
         "id": "badge",
         "label": "Badge",
-        "default": "NEW RELEASE"
+        "default": "new release"
       },
 
       {
