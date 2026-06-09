@@ -1,13 +1,5 @@
 <style>
 
-  .product-feature {
-    background-color: #f3f3f3;
-  }
-
-  .page-width {
-    padding: 0;
-  }
-
   .product-feature__container {
     display: flex;
     flex-direction: column;
@@ -15,6 +7,7 @@
     align-items: center;
     justify-content: space-between;
     gap: 30px;
+    background-color: #f3f3f3;
   }
 
   .product-feature__image-column {
@@ -121,62 +114,58 @@
 </style>
 
 
-<section class="product-feature">
-  <div class="page-width">
-    <div class="product-feature__container">
+<div class="product-feature__container">
 
-      <div class="product-feature__image-column">
-        {% if section.settings.image != blank %}
-          <img
-            src="{{ section.settings.image | image_url: width: 1200 }}"
-            width="4000"
-            height="4000"
-            alt="{{ section.settings.heading | escape }}"
-            class="product-feature__image"
-            loading="lazy">
-        {% else %}
-          {{ 'product-1' | placeholder_svg_tag }}
-        {% endif %}
-      </div>
-
-      <div class="product-feature__content-column">
-
-        {% if section.settings.badge != blank %}
-          <span class="product-feature__badge">
-            {{ section.settings.badge }}
-          </span>
-        {% endif %}
-
-        {% if section.settings.heading != blank %}
-          <h2 class="product-feature__heading">
-            {{ section.settings.heading }}
-          </h2>
-        {% endif %}
-
-        {% if section.settings.subheading != blank %}
-          <h3 class="product-feature__subheading">
-            {{ section.settings.subheading }}
-          </h3>
-        {% endif %}
-
-        {% if section.settings.description != blank %}
-          <div class="product-feature__description">
-            {{ section.settings.description }}
-            <br>
-          </div>
-        {% endif %}
-
-        {% if section.settings.button_label != blank and section.settings.button_link != blank %}
-          <a href="{{ section.settings.button_link }}" class="product-feature__button">
-            {{ section.settings.button_label }}
-          </a>
-        {% endif %}
-
-      </div>
-
-    </div>
+  <div class="product-feature__image-column">
+    {% if section.settings.image != blank %}
+      <img
+        src="{{ section.settings.image | image_url: width: 1200 }}"
+        width="4000"
+        height="4000"
+        alt="{{ section.settings.heading | escape }}"
+        class="product-feature__image"
+        loading="lazy">
+    {% else %}
+      {{ 'product-1' | placeholder_svg_tag }}
+    {% endif %}
   </div>
-</section>
+
+  <div class="product-feature__content-column">
+
+    {% if section.settings.badge != blank %}
+      <span class="product-feature__badge">
+        {{ section.settings.badge }}
+      </span>
+    {% endif %}
+
+    {% if section.settings.heading != blank %}
+      <h2 class="product-feature__heading">
+        {{ section.settings.heading }}
+      </h2>
+    {% endif %}
+
+    {% if section.settings.subheading != blank %}
+      <h3 class="product-feature__subheading">
+        {{ section.settings.subheading }}
+      </h3>
+    {% endif %}
+
+    {% if section.settings.description != blank %}
+      <div class="product-feature__description">
+        {{ section.settings.description }}
+        <br>
+      </div>
+    {% endif %}
+
+    {% if section.settings.button_label != blank and section.settings.button_link != blank %}
+      <a href="{{ section.settings.button_link }}" class="product-feature__button">
+        {{ section.settings.button_label }}
+      </a>
+    {% endif %}
+
+  </div>
+
+</div>
 
 {% schema %}
   {

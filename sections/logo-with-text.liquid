@@ -1,6 +1,6 @@
 <style>
 
-  .featured__logo--container {
+  .featured-logo__container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     padding-inline: 20px;
@@ -8,19 +8,19 @@
     width: 100%;
   }
 
-  .featured__logo--image {
+  .featured-logo__image {
     margin: 0 auto;
     width: 60px;
     height: 60px;
   }
 
-  .featured__logo--image img {
+  .featured-logo__image img {
     width: 100%;
     height: 100%;
     margin-bottom: 15px;
   }
 
-  .featured__logo--text {
+  .featured-logo__text {
     margin-top: 30px;
     margin-bottom: 10px;
     font-size: 14px;
@@ -32,21 +32,21 @@
   }
 
   @media screen and (min-width: 768px) {
-    .featured__logo--container {
+    .featured-logo__container {
       grid-template-columns: repeat(5, 1fr);
     }
   }
 
 </style>
 
-<div class="featured__logo--container">
+<div class="featured-logo__container">
   {% for block in section.blocks %}
-    <div class="featured__logo--inner">
-      <div class="featured__logo--image">
+    <div class="featured-logo__inner">
+      <div class="featured-logo__image">
 
         {% if block.settings.card_image != blank %}
           <img
-            src="{{ block.settings.card_image | image_url: width: block.card_image.width }}"
+            src="{{ block.settings.card_image | image_url: width: block.settings.card_image.width }}"
             width="60"
             height="60"
             loading="lazy"
@@ -56,7 +56,7 @@
         {% endif %}
       </div>
       {% if block.settings.text != blank %}
-        <p class="featured__logo--text">
+        <p class="featured-logo__text">
           {{ block.settings.text }}
         </p>
       {% endif %}
