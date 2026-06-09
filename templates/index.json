@@ -99,7 +99,7 @@
       "settings": {}
     },
     "custom_image_with_text_iGNbaL": {
-      "type": "image-with-text-V1 ",
+      "type": "image-with-text-v1",
       "name": "Featured Product",
       "settings": {
         "image": "shopify://shop_images/elkorgan.webp",
