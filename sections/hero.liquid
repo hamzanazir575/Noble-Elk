@@ -90,7 +90,7 @@
   {% if section.settings.hero_image != blank %}
     <img
       class="custom-hero-banner__image"
-      src="{{ section.settings.hero_image | image_url: width: 1920 }}"
+      src="{{ section.settings.hero_image | image_url: width: section.settings.hero_image.width }}"
       width="1920"
       height="1280"
       loading="lazy"
