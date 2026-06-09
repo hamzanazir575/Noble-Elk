@@ -42,10 +42,11 @@
       "type": "hero",
       "name": "Hero",
       "settings": {
+        "hero_image": "shopify://shop_images/noble-elk-bull.webp",
         "heading": "NOBLE BY NAME, QUALITY BY CHOICE.",
         "text": "Premium Elk Meat, Antler, and Supplements",
         "button_label": "SHOP NOW",
-        "button_link": ""
+        "button_link": "shopify://products/elk-meat"
       }
     },
     "featured_logos_jhzw3F": {
@@ -54,31 +55,36 @@
         "logo_yfTFJ4": {
           "type": "logo",
           "settings": {
-            "text": "Logo text"
+            "card_image": "shopify://shop_images/elk_farm.svg",
+            "text": "pasture raised elk from the usa"
           }
         },
         "logo_YCt3FF": {
           "type": "logo",
           "settings": {
-            "text": "Logo text"
+            "card_image": "shopify://shop_images/syringe.svg",
+            "text": "no hormones and no antibiotics"
           }
         },
         "logo_ARJGpQ": {
           "type": "logo",
           "settings": {
-            "text": "Logo text"
+            "card_image": "shopify://shop_images/4.svg",
+            "text": "fda and usda inspected"
           }
         },
         "logo_tVPNYh": {
           "type": "logo",
           "settings": {
-            "text": "Logo text"
+            "card_image": "shopify://shop_images/5.svg",
+            "text": "gmp compliant facility"
           }
         },
         "logo_wmdU7g": {
           "type": "logo",
           "settings": {
-            "text": "Logo text"
+            "card_image": "shopify://shop_images/usa.svg",
+            "text": "veteran owned america first"
           }
         }
       },
@@ -96,12 +102,13 @@
       "type": "image-with-text-v1",
       "name": "Featured Product V1",
       "settings": {
+        "image": "shopify://shop_images/elkorgan.webp",
         "badge": "new release",
         "heading": "Freeze-Dried Elk Organ Treats",
         "subheading": "From Our Herd to your Pack",
         "description": "<p>Made from 100% farm-raised elk organs. Freeze-dried to preserve natural flavor and nutrients, these primal treats deliver an exciting alternative to everyday dog snacks.</p>",
         "button_label": "Buy Now",
-        "button_link": ""
+        "button_link": "shopify://products/antler-chews"
       }
     }
   },
