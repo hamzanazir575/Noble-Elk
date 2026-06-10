@@ -2455,7 +2455,7 @@ input[type='checkbox'] {
   .header--middle-left {
     grid-template-areas: 'heading navigation icons';
     /* grid-template-columns: auto auto 1fr; */
-    column-gap: 2rem;
+    column-gap: 2.25rem;
   }
 
   .header--middle-center:not(.drawer-menu) {
@@ -2883,7 +2883,7 @@ details[open] > .header__submenu {
 }
 
 .header__menu-item {
-  padding: 17px;
+  padding: 16px;
   text-decoration: none;
   color: rgba(var(--color-foreground), 0.75);
 }
