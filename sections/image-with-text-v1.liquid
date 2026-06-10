@@ -84,7 +84,6 @@
     background: #333333;
   }
 
-
   @media screen and (min-width: 748px) {
      .image-with-text-v1__container--image_first {
       flex-direction: row;
@@ -114,15 +113,13 @@
   }
 </style>
 
-
 <div class="image-with-text-v1__container image-with-text-v1__container--{{ section.settings.layout }} image-with-text-v1__container--{{ section.settings.mobile_layout }}">
   <div class="image-with-text-v1__image-column">
     {% if section.settings.image != blank %}
       <img
         src="{{ section.settings.image | image_url: width: section.settings.image.width }}"
-        width="4000"
-        height="4000"
-        alt="{{ section.settings.heading | escape }}"
+        width="{{ section.settings.image.width }}"
+        height="{{ section.settings.image.height }}"
         class="image-with-text-v1__image"
         loading="lazy">
     {% else %}

@@ -1,5 +1,4 @@
 <style>
-
   .custom-hero-banner {
     position: relative;
     width: 100%;
@@ -88,7 +87,6 @@
       letter-spacing: 0.6px;
     }
   }
-
 </style>
 
 <div class="custom-hero-banner">
@@ -96,8 +94,8 @@
     <img
       class="custom-hero-banner__image"
       src="{{ section.settings.hero_image | image_url: width: section.settings.hero_image.width }}"
-      width="1920"
-      height="1280"
+      width="{{ section.settings.hero_image.width }}"
+      height="{{ section.settings.hero_image.height }}"
       loading="lazy"
       alt="Elk with large antlers in a grassy field with cornfield in the background">
   {% else %}
@@ -138,35 +136,30 @@
         "id": "hero_image",
         "label": "Background Image"
       },
-
       {
         "type": "text",
         "id": "heading",
         "label": "Heading",
         "default": "NOBLE BY NAME, QUALITY BY CHOICE."
       },
-
       {
         "type": "text",
         "id": "text",
         "label": "Subheading",
         "default": "Premium Elk Meat, Antler, and Supplements"
       },
-
       {
         "type": "text",
         "id": "button_label",
         "label": "Button Label",
         "default": "SHOP NOW"
       },
-
       {
         "type": "url",
         "id": "button_link",
         "label": "Button Link"
       }
     ],
-
     "presets": [
       {
         "name": "Hero"
