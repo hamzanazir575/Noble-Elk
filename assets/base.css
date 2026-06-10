@@ -673,9 +673,9 @@ summary {
 
 summary .icon-caret {
   position: absolute;
-  height: 0.6rem;
+  height: 6px;
   right: 1.5rem;
-  top: calc(50% - 0.2rem);
+  top: calc(50% - 0.155rem);
 }
 
 summary::-webkit-details-marker {
@@ -2577,7 +2577,7 @@ input[type='checkbox'] {
   display: flex;
   grid-area: icons;
   justify-self: end;
-  padding-right: 0.8rem;
+  padding-right: 0.6rem;
 }
 
 .header__icons .shopify-app-block {
@@ -2883,7 +2883,7 @@ details[open] > .header__submenu {
 }
 
 .header__menu-item {
-  padding: 16px;
+  padding: 17px;
   text-decoration: none;
   color: rgba(var(--color-foreground), 0.75);
 }
@@ -2982,8 +2982,8 @@ details[open] > .header__menu-item .icon-caret {
 }
 
 .header__menu-item .icon-caret {
-  right: 5px;
-  width: 11px;
+  right: 4px;
+  width: 10px;
 }
 
 .header__submenu .icon-caret {
