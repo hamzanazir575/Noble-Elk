@@ -1,6 +1,5 @@
 <style>
-
-  .product-feature__container {
+  .image-with-text-v1__container {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -9,28 +8,36 @@
     background-color: #f3f3f3;
   }
 
-  .product-feature__image-column {
+  .image-with-text-v1__container--image_first_mobile {
+    flex-direction: column;
+  }
+
+  .image-with-text-v1__container--image_second_mobile {
+    flex-direction: column-reverse;
+  }
+
+  .image-with-text-v1__image-column {
     flex: 0 0 45%;
   }
-
-  .product-feature__content-column {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    gap: 16px;
-    padding: 30px;
-  }
-
-  .product-feature__image {
+  
+  .image-with-text-v1__image {
     width: 100%;
     height: 100%;
     display: block;
     margin: 0 auto;
   }
+  
+  .image-with-text-v1__content-column {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 16px;
+    padding: 30px;
+  }
 
-  .product-feature__badge {
-    display: inline-block;
-    width: fit-content;
+
+  .image-with-text-v1__badge {
     background: {{ section.settings.badge_background_color }};
     color: {{ section.settings.badge_font_color }};
     padding: 8px 12px;
@@ -41,38 +48,33 @@
     text-transform: uppercase;
   }
 
-  .product-feature__heading {
+  .image-with-text-v1__heading {
+    color: {{ section.settings.heading_font_color }};
     font-size: 28.8px;
     line-height: 1.2;
-    background-color: {{ section.settings.heading_bg_color }};
-    color: {{ section.settings.heading_font_color }};
     font-weight: 400;
     margin: 0;
   }
 
-  .product-feature__subheading {
-    font-weight: bolder;
-    background-color: {{ section.settings.subheading_bg_color }};
+  .image-with-text-v1__subheading {
     color: {{ section.settings.subheading_font_color }};
+    font-weight: 700;
     line-height: 1.6;
     margin-block: 16px 10px;
     font-size: 16px;
   }
 
-  .product-feature__description {
+  .image-with-text-v1__description {
+    color: {{ section.settings.description_font_color }};
     font-size: 16px;
     line-height: 1.6;
     letter-spacing: 0.6px;
-    background-color: {{ section.settings.description_bg_color }};
-    color: {{ section.settings.description_font_color }};
   }
 
-  .product-feature__button {
-    display: inline-block;
-    width: fit-content;
-    padding: 15px 27px;
+  .image-with-text-v1__button {
     background-color: {{ section.settings.btn_bg_color }};
     color: {{ section.settings.btn_font_color }};
+    padding: 15px 27px;
     text-decoration: none;
     border-radius: 6px;
     font-size: 12px;
@@ -81,89 +83,82 @@
     transition: background-color 0.3s ease
   }
 
-  .product-feature__button:hover {
-    background: {{ section.settings.btn_hover_color }};
+  .image-with-text-v1__button:hover {
+    background: #333333;
   }
 
 
   @media screen and (min-width: 748px) {
 
-    .product-feature__container {
-      gap: 40px;
-    }
-
-    .product-feature__container--image_first {
+     .image-with-text-v1__container--image_first {
       flex-direction: row;
     }
 
-    .product-feature__container--image_second {
+    .image-with-text-v1__container--image_second {
       flex-direction: row-reverse;
     }
 
-    .product-feature__content-column {
+
+    .image-with-text-v1__container {
+      gap: 40px;
+    }
+
+    .image-with-text-v1__content-column {
       padding: 40px;
     }
 
-    .product-feature__heading {
+    .image-with-text-v1__heading {
       font-size: 36px;
     }
 
-    .product-feature__subheading {
-      font-size: 16px;
-    }
-
-    .product-feature__description {
+    .image-with-text-v1__subheading,
+    .image-with-text-v1__description {
       font-size: 16px;
     }
   }
 </style>
 
 
-<div class="product-feature__container product-feature__container--{{ section.settings.layout }}">
-
-  <div class="product-feature__image-column">
+<div class="image-with-text-v1__container image-with-text-v1__container--{{ section.settings.layout }} image-with-text-v1__container--{{ section.settings.mobile_layout }}">
+  <div class="image-with-text-v1__image-column">
     {% if section.settings.image != blank %}
       <img
         src="{{ section.settings.image | image_url: width: section.settings.image.width }}"
         width="4000"
         height="4000"
         alt="{{ section.settings.heading | escape }}"
-        class="product-feature__image"
+        class="image-with-text-v1__image"
         loading="lazy">
     {% else %}
       {{ 'product-1' | placeholder_svg_tag }}
     {% endif %}
 
   </div>
-  <div class="product-feature__content-column">
-
+  <div class="image-with-text-v1__content-column">
     {% if section.settings.badge != blank %}
-      <span class="product-feature__badge">
+      <span class="image-with-text-v1__badge">
         {{ section.settings.badge }}
       </span>
     {% endif %}
 
     {% if section.settings.heading != blank %}
-      <h2 class="product-feature__heading">
+      <h2 class="image-with-text-v1__heading">
         {{ section.settings.heading }}
       </h2>
     {% endif %}
 
     {% if section.settings.subheading != blank %}
-      <h3 class="product-feature__subheading">
+      <h3 class="image-with-text-v1__subheading">
         {{ section.settings.subheading }}
       </h3>
     {% endif %}
 
     {% if section.settings.description != blank %}
-      <div class="product-feature__description">
-        {{ section.settings.description }}
-        <br>
-      </div>
+        <p class="image-with-text-v1__description">{{ section.settings.description }}</p>
     {% endif %}
 
     {% if section.settings.button_label != blank and section.settings.button_link != blank %}
-      <a href="{{ section.settings.button_link }}" class="product-feature__button">
+      <a href="{{ section.settings.button_link }}" class="image-with-text-v1__button">
         {{ section.settings.button_label }}
       </a>
     {% endif %}
@@ -173,10 +168,9 @@
 
 {% schema %}
   {
-    "name": "Featured Product V1",
+    "name": "Image With Text V1",
     "tag": "section",
-    "class": "product-feature",
-
+    "class": "image-with-text-v1",
     "settings": [
       {
         "type": "image_picker",
@@ -200,6 +194,22 @@
         "default": "image_first"
       },
       {
+        "type": "select",
+        "id": "mobile_layout",
+        "label": "Mobile Image Position",
+        "options": [
+          {
+            "value": "image_first_mobile",
+            "label": "Image First"
+          },
+          {
+            "value": "image_second_mobile",
+            "label": "Image Second"
+          }
+        ],
+        "default": "image_first_mobile"
+      },
+      {
         "type": "text",
         "id": "badge",
         "label": "Badge",
@@ -214,7 +224,7 @@
       {
         "type": "color",
         "id": "badge_font_color",
-        "label": "Badge Font Color",
+        "label": "Badge Text Color",
         "default": "#ffffff"
       },
       {
@@ -225,14 +235,8 @@
       },
       {
         "type": "color",
-        "id": "heading_bg_color",
-        "label": "Heading Background Color",
-        "default": "#00000000"
-      },
-      {
-        "type": "color",
         "id": "heading_font_color",
-        "label": "Heading Font Color",
+        "label": "Heading Text Color",
         "default": "#121212"
       },
       {
@@ -240,17 +244,11 @@
         "id": "subheading",
         "label": "Sub Heading",
         "default": "Write subheading here"
-      },
-      {
-        "type": "color",
-        "id": "subheading_bg_color",
-        "label": "Subeading Background Color",
-        "default": "#00000000"
       }, 
       {
         "type": "color",
         "id": "subheading_font_color",
-        "label": "Subheading Font Color",
+        "label": "Subheading Text Color",
         "default": "#121212"
       },
       {
@@ -258,17 +256,11 @@
         "id": "description",
         "label": "Description",
         "default": "<p>Write description here</p>"
-      },     
-      {
-        "type": "color",
-        "id": "description_bg_color",
-        "label": "Description Background Color",
-        "default": "#00000000"
-      }, 
+      },      
       {
         "type": "color",
         "id": "description_font_color",
-        "label": "Description Font Color",
+        "label": "Description Text Color",
         "default": "#121212"
       },   
       {
@@ -286,25 +278,18 @@
       {
         "type": "color",
         "id": "btn_font_color",
-        "label": "Button Font Color",
+        "label": "Button Text Color",
         "default": "#ffffff"
       }, 
-      {
-        "type": "color",
-        "id": "btn_hover_color",
-        "label": "Button Hover Color",
-        "default": "#121212"
-      },
       {
         "type": "url",
         "id": "button_link",
         "label": "Button Link"
       }
     ],
-
     "presets": [
       {
-        "name": "Featured Product V1"
+        "name": "Image With Text V1"
       }
     ]
   }
