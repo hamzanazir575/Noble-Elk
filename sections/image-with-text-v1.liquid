@@ -153,8 +153,10 @@
       </h3>
     {% endif %}
 
-    {% if section.settings.description != blank %}
-        <p class="image-with-text-v1__description">{{ section.settings.description }}</p>
+    {% if section.settings.text != blank %}
+      <p class="image-with-text-v1__description">
+        {{ section.settings.text }}
+      </p>
     {% endif %}
 
     {% if section.settings.button_label != blank and section.settings.button_link != blank %}
@@ -252,10 +254,10 @@
         "default": "#121212"
       },
       {
-        "type": "richtext",
-        "id": "description",
+        "type": "text",
+        "id": "text",
         "label": "Description",
-        "default": "<p>Write description here</p>"
+        "default": "Write description here"
       },      
       {
         "type": "color",
