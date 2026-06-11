@@ -119,12 +119,63 @@
         "btn_font_color": "#ffffff",
         "button_link": "shopify://products/antler-chews"
       }
+    },
+    "tp_image_with_text_3_giAizE": {
+      "type": "tp-image-with-text-3",
+      "name": "TP - Image with Text 3",
+      "settings": {
+        "image_fit": "cover",
+        "heading": "The Best Gifts for Cyclists",
+        "text": "<p>From clip-in shoes to must-have layers, no cyclist will be disappointed with one of these gifts from Nike.</p>",
+        "button_text": "Let's go!",
+        "button_link": "#",
+        "button_target": "_blank",
+        "button_hover": "invert",
+        "desktop_heading_size": 40,
+        "mobile_heading_size": 32,
+        "heading_weight": "600",
+        "desktop_text_size": 16,
+        "mobile_text_size": 14,
+        "desktop_button_size": 16,
+        "mobile_button_size": 14,
+        "button_weight": "600",
+        "background_color": "#FFFFFF",
+        "background_gradient": "",
+        "heading_color": "#000000",
+        "text_color": "#666666",
+        "button_background": "#000000",
+        "button_color": "#FFFFFF",
+        "image_filter": "none",
+        "section_width": 1200,
+        "content_max_width": 500,
+        "desktop_layout_direction": "row",
+        "mobile_layout_direction": "column",
+        "image_border_radius": 20,
+        "desktop_button_padding_inline": 30,
+        "mobile_button_padding_inline": 20,
+        "desktop_content_gap": 60,
+        "mobile_content_gap": 30,
+        "desktop_heading_margin": 24,
+        "mobile_heading_margin": 16,
+        "desktop_text_margin": 32,
+        "mobile_text_margin": 24,
+        "desktop_image_min_height": 500,
+        "mobile_image_min_height": 300,
+        "button_radius": 0,
+        "desktop_padding_top": 60,
+        "desktop_padding_bottom": 60,
+        "mobile_padding_top": 40,
+        "mobile_padding_bottom": 40,
+        "html_id": "",
+        "html_class": ""
+      }
     }
   },
   "order": [
     "featured_collection",
     "hero_RbHK7h",
     "featured_logos_jhzw3F",
-    "image_with_text_v1_FBxfYQ"
+    "image_with_text_v1_FBxfYQ",
+    "tp_image_with_text_3_giAizE"
   ]
 }
