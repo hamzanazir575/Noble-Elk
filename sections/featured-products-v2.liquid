@@ -1,6 +1,6 @@
 <style>
-.shopify-section.featured-product-v1 {
-   background-color: rgb(185 161 108 / 9%);
+.featured-product-v1 {
+  background-color: rgb(185 161 108 / 9%);
 }
 
 .featured-products-v1__container {
@@ -183,7 +183,7 @@
           </div>
         </a>
       {% else %}
-        <p> hello World </p>
+        {{ 'product-1' | placeholder_svg_tag: 'featured-logo__placeholder' }}
       {% endif %}
     {% endfor %}
   </div>
