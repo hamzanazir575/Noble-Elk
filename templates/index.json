@@ -119,20 +119,12 @@
         "btn_font_color": "#ffffff",
         "button_link": "shopify://products/antler-chews"
       }
-    },
-    "featured_products_v2_kwJtLX": {
-      "type": "featured-products-v2",
-      "name": "Featured Products v1",
-      "settings": {
-        "heading": "Featured Products"
-      }
     }
   },
   "order": [
     "featured_collection",
     "hero_RbHK7h",
     "featured_logos_jhzw3F",
-    "image_with_text_v1_Dh8jzA",
-    "featured_products_v2_kwJtLX"
+    "image_with_text_v1_Dh8jzA"
   ]
 }

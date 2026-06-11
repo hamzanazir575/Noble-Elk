@@ -144,53 +144,49 @@
 </style>
 
 <div class="featured-products-v1__container">
+  <div class="featured-products-v1__header">
+    <h2 class="featured-products-v1__heading">
+      {{ section.settings.heading }}
+    </h2>
+  </div>
 
-    <div class="featured-products-v1__header">
-      <h2 class="featured-products-v1__heading">
-        {{ section.settings.heading }}
-      </h2>
-    </div>
-    <div class="featured-products-v1__grid">
+  <div class="featured-products-v1__grid">
+    {% for block in section.blocks %}
+      {% assign product = block.settings.product %}
+      {% if product != blank %}
+        <a
+          href="{{ product.url }}"
+          class="featured-products-v1__item featured-products-v1__item--{{ forloop.index }}"
+        >
+          {% if product.featured_image %}
+            <img
+              class="featured-products-v1__image"
+              src="{{ product.featured_image | image_url: width: product.featured_image.width}}"
+              alt="{{ product.title }}"
+              loading="lazy"
+              width="{{product.featured_image.width}}"
+              height="{{product.featured_image.height}}"
+            >
+            {% else %}
+            {{ 'product-1' | placeholder_svg_tag: 'featured-logo__placeholder' }}
+          {% endif %}
+          <div class="featured-products-v1__content">
+            <h3 class="featured-products-v1__title">
 
-      {% for block in section.blocks %}
-
-        {% assign product = block.settings.product %}
-
-        {% if product != blank %}
-          <a
-            href="{{ product.url }}"
-            class="featured-products-v1__item featured-products-v1__item--{{ forloop.index }}"
-          >
-            {% if product.featured_image %}
-              <img
-                class="featured-products-v1__image"
-                src="{{ product.featured_image | image_url: width: product.featured_image.width}}"
-                alt="{{ product.title }}"
-                loading="lazy"
-                width="{{product.featured_image.width}}"
-                height="{{product.featured_image.height}}"
-              >
+              {% if block.settings.custom_title != blank %}
+                {{ block.settings.custom_title }}
               {% else %}
-              {{ 'product-1' | placeholder_svg_tag: 'featured-logo__placeholder' }}
-            {% endif %}
+                {{ product.title }}
+              {% endif %}
 
-            <div class="featured-products-v1__content">
-              <h3 class="featured-products-v1__title">
-
-                {% if block.settings.custom_title != blank %}
-                  {{ block.settings.custom_title }}
-                {% else %}
-                  {{ product.title }}
-                {% endif %}
-
-              </h3>
-            </div>
-          </a>
-
-        {% endif %}
-
-      {% endfor %}
-    </div>
+            </h3>
+          </div>
+        </a>
+      {% else %}
+        <p> hello World </p>
+      {% endif %}
+    {% endfor %}
+  </div>
 </div>
 
 {% schema %}
