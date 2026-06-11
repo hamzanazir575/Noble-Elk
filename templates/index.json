@@ -120,29 +120,9 @@
         "button_link": "shopify://products/antler-chews"
       }
     },
-    "featured_products_v2_w67bL3": {
+    "featured_products_v2_kwJtLX": {
       "type": "featured-products-v2",
-      "blocks": {
-        "product_VWkXMY": {
-          "type": "product",
-          "settings": {
-            "product": "apparels",
-            "custom_title": ""
-          }
-        },
-        "product_MTyhbX": {
-          "type": "product",
-          "settings": {
-            "product": "elk-meat",
-            "custom_title": ""
-          }
-        }
-      },
-      "block_order": [
-        "product_VWkXMY",
-        "product_MTyhbX"
-      ],
-      "name": "Featured Products v2",
+      "name": "Featured Products v1",
       "settings": {
         "heading": "Featured Products"
       }
@@ -153,6 +133,6 @@
     "hero_RbHK7h",
     "featured_logos_jhzw3F",
     "image_with_text_v1_Dh8jzA",
-    "featured_products_v2_w67bL3"
+    "featured_products_v2_kwJtLX"
   ]
 }
