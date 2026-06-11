@@ -123,20 +123,6 @@
     "featured_products_v2_w67bL3": {
       "type": "featured-products-v2",
       "blocks": {
-        "product_JjBqPr": {
-          "type": "product",
-          "settings": {
-            "product": "supplements",
-            "custom_title": ""
-          }
-        },
-        "product_xqHLwT": {
-          "type": "product",
-          "settings": {
-            "product": "antler-chews",
-            "custom_title": ""
-          }
-        },
         "product_VWkXMY": {
           "type": "product",
           "settings": {
@@ -153,8 +139,6 @@
         }
       },
       "block_order": [
-        "product_JjBqPr",
-        "product_xqHLwT",
         "product_VWkXMY",
         "product_MTyhbX"
       ],
