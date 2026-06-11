@@ -162,6 +162,49 @@
       "settings": {
         "heading": "Featured Products"
       }
+    },
+    "featured_collection_v1_Wkfphh": {
+      "type": "featured-collection-v1",
+      "blocks": {
+        "collection_t4nRi4": {
+          "type": "collection",
+          "settings": {
+            "collection": "noble-elk-store",
+            "custom_title": "supplements"
+          }
+        },
+        "collection_h7TpMc": {
+          "type": "collection",
+          "settings": {
+            "collection": "antler-chews-collections-copy",
+            "custom_title": "apparels"
+          }
+        },
+        "collection_CewKWF": {
+          "type": "collection",
+          "settings": {
+            "collection": "supplements-collections-copy",
+            "custom_title": "antler chews"
+          }
+        },
+        "collection_LBUY6a": {
+          "type": "collection",
+          "settings": {
+            "collection": "apparels-collections-copy",
+            "custom_title": "elk meat"
+          }
+        }
+      },
+      "block_order": [
+        "collection_t4nRi4",
+        "collection_h7TpMc",
+        "collection_CewKWF",
+        "collection_LBUY6a"
+      ],
+      "name": "Featured Collection v1",
+      "settings": {
+        "heading": "Featured Collections"
+      }
     }
   },
   "order": [
@@ -169,6 +212,7 @@
     "hero_RbHK7h",
     "featured_logos_jhzw3F",
     "image_with_text_v1_Dh8jzA",
-    "featured_products_v2_tURabU"
+    "featured_products_v2_tURabU",
+    "featured_collection_v1_Wkfphh"
   ]
 }
