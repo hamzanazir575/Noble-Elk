@@ -119,100 +119,12 @@
         "btn_font_color": "#ffffff",
         "button_link": "shopify://products/antler-chews"
       }
-    },
-    "featured_products_v2_tURabU": {
-      "type": "featured-products-v2",
-      "blocks": {
-        "product_RP6Hzc": {
-          "type": "product",
-          "settings": {
-            "product": "supplements",
-            "custom_title": ""
-          }
-        },
-        "product_bJkgVB": {
-          "type": "product",
-          "settings": {
-            "product": "antler-chews",
-            "custom_title": ""
-          }
-        },
-        "product_8WLAHV": {
-          "type": "product",
-          "settings": {
-            "product": "apparels",
-            "custom_title": ""
-          }
-        },
-        "product_7fFRPy": {
-          "type": "product",
-          "settings": {
-            "product": "elk-meat",
-            "custom_title": ""
-          }
-        }
-      },
-      "block_order": [
-        "product_RP6Hzc",
-        "product_bJkgVB",
-        "product_8WLAHV",
-        "product_7fFRPy"
-      ],
-      "name": "Featured Products v1",
-      "settings": {
-        "heading": "Featured Products"
-      }
-    },
-    "featured_collection_v1_Wkfphh": {
-      "type": "featured-collection-v1",
-      "blocks": {
-        "collection_t4nRi4": {
-          "type": "collection",
-          "settings": {
-            "collection": "noble-elk-store",
-            "custom_title": "supplements"
-          }
-        },
-        "collection_h7TpMc": {
-          "type": "collection",
-          "settings": {
-            "collection": "antler-chews-collections-copy",
-            "custom_title": "apparels"
-          }
-        },
-        "collection_CewKWF": {
-          "type": "collection",
-          "settings": {
-            "collection": "supplements-collections-copy",
-            "custom_title": "antler chews"
-          }
-        },
-        "collection_LBUY6a": {
-          "type": "collection",
-          "settings": {
-            "collection": "apparels-collections-copy",
-            "custom_title": "elk meat"
-          }
-        }
-      },
-      "block_order": [
-        "collection_t4nRi4",
-        "collection_h7TpMc",
-        "collection_CewKWF",
-        "collection_LBUY6a"
-      ],
-      "name": "Featured Collection v1",
-      "settings": {
-        "heading": "Featured Collections"
-      }
     }
   },
   "order": [
     "featured_collection",
     "hero_RbHK7h",
     "featured_logos_jhzw3F",
-    "image_with_text_v1_Dh8jzA",
-    "featured_products_v2_tURabU",
-    "featured_collection_v1_Wkfphh"
+    "image_with_text_v1_Dh8jzA"
   ]
 }
