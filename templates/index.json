@@ -119,6 +119,7 @@
         "btn_font_color": "#ffffff",
         "button_link": "shopify://products/antler-chews"
       }
+<<<<<<< HEAD
     },
     "featured_products_v2_w67bL3": {
       "type": "featured-collection-v1",
@@ -162,13 +163,19 @@
       "settings": {
         "heading": "Featured Products"
       }
+=======
+>>>>>>> cfd73fa2a0265cae34d3d3a9fdfce649fe20e2b8
     }
   },
   "order": [
     "featured_collection",
     "hero_RbHK7h",
     "featured_logos_jhzw3F",
+<<<<<<< HEAD
     "image_with_text_v1_Dh8jzA",
     "featured_products_v2_w67bL3"
+=======
+    "image_with_text_v1_Dh8jzA"
+>>>>>>> cfd73fa2a0265cae34d3d3a9fdfce649fe20e2b8
   ]
 }
