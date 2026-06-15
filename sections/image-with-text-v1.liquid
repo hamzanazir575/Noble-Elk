@@ -84,7 +84,7 @@
 
   @media screen and (min-width: 748px) {
     #image-with-text-{{ section.id }} {
-      --layout-direction:{{ section.settings.layout }};
+      --layout-direction:{{ section.settings.desktop_layout }};
     }
 
     .image-with-text-v1__content-column {
@@ -168,7 +168,7 @@
       },
       {
         "type": "select",
-        "id": "layout",
+        "id": "desktop_layout",
         "label": "Desktop: Image Position",
         "options": [
           {
