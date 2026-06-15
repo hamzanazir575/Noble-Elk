@@ -103,7 +103,7 @@
       "name": "Image With Text V1",
       "settings": {
         "image": "shopify://shop_images/elkorgan.webp",
-        "layout": "row",
+        "desktop_layout": "row",
         "mobile_layout": "column",
         "badge": "new release",
         "badge_background_color": "#121212",
@@ -120,47 +120,69 @@
         "button_link": "shopify://products/antler-chews"
       }
     },
-    "featured_products_v2_w67bL3": {
+    "featured_collection_v1_habyDX": {
       "type": "featured-collection-v1",
       "blocks": {
-        "product_JjBqPr": {
-          "type": "product",
+        "collection_KDizgd": {
+          "type": "collection",
           "settings": {
-            "product": "supplements",
-            "custom_title": ""
+            "collection": "noble-elk-store",
+            "custom_title": "supplements",
+            "title_text_color": "#fff"
           }
         },
-        "product_xqHLwT": {
-          "type": "product",
+        "collection_HqxVLT": {
+          "type": "collection",
           "settings": {
-            "product": "antler-chews",
-            "custom_title": ""
+            "collection": "supplements-collections-copy",
+            "custom_title": "antler chews",
+            "title_text_color": "#fff"
           }
         },
-        "product_VWkXMY": {
-          "type": "product",
+        "collection_YBnxUk": {
+          "type": "collection",
           "settings": {
-            "product": "apparels",
-            "custom_title": ""
+            "collection": "antler-chews-collections-copy",
+            "custom_title": "apparels",
+            "title_text_color": "#fff"
           }
         },
-        "product_MTyhbX": {
-          "type": "product",
+        "collection_UftUc3": {
+          "type": "collection",
           "settings": {
-            "product": "elk-meat",
-            "custom_title": ""
+            "collection": "apparels-collections-copy",
+            "custom_title": "elk meat",
+            "title_text_color": "#fff"
           }
         }
       },
       "block_order": [
-        "product_JjBqPr",
-        "product_xqHLwT",
-        "product_VWkXMY",
-        "product_MTyhbX"
+        "collection_KDizgd",
+        "collection_HqxVLT",
+        "collection_YBnxUk",
+        "collection_UftUc3"
       ],
-      "name": "Featured Products v2",
+      "name": "Featured Collection v1",
       "settings": {
-        "heading": "Featured Products"
+        "heading": "Featured Collections",
+        "heading_text_color": "#000000",
+        "overlay_opacity": 50
+      }
+    },
+    "image_with_text_v2_RKeirp": {
+      "type": "image-with-text-v2",
+      "name": "Image With Text V2",
+      "settings": {
+        "image": "shopify://shop_images/Dog_with_Antler_Chew.webp",
+        "layout": "row",
+        "mobile_layout": "column",
+        "heading": "FOR PEOPLE AND PETS",
+        "heading_font_color": "#121212",
+        "text": "All-natural elk antler dog chews, freeze-dried elk treats, and velvet antler hip+joint supplements.",
+        "description_font_color": "#121212",
+        "button_label": "Pet Products",
+        "btn_font_color": "#D3AE5D",
+        "button_link": "shopify://products/antler-chews"
       }
     }
   },
@@ -168,6 +190,8 @@
     "featured_collection",
     "hero_RbHK7h",
     "featured_logos_jhzw3F",
-    "image_with_text_v1_Dh8jzA"
+    "image_with_text_v1_Dh8jzA",
+    "featured_collection_v1_habyDX",
+    "image_with_text_v2_RKeirp"
   ]
 }
