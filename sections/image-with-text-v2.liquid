@@ -1,4 +1,8 @@
 <style>
+  #image-with-text-{{ section.id }} {
+  --layout-direction: {{ section.settings.mobile_layout }};
+}
+
   .image-with-text-v2__container {
     max-width: 1220px;
     display: flex;
@@ -9,14 +13,12 @@
     padding-block: 51.5px;
     padding-inline: 20px;
     margin-inline: auto;
-  }
-
-    #image-with-text-{{ section.id }} {
-    --layout-direction: {{ section.settings.mobile_layout }};
+    box-sizing: border-box;
   }
 
   .image-with-text-v2__image-column {
-    flex: 0 0 50.1%;
+    max-width: 591px;
+    aspect-ratio: 1 / 1;
   }
   
   .image-with-text-v2__image {
@@ -28,6 +30,7 @@
   
   .image-with-text-v2__content-column {
     max-width: 412px;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -69,7 +72,7 @@
     color: {{ section.settings.btn_font_color }};
     display: inline-flex;
     align-items: center;
-    gap: 3px;
+    gap: 4px;
     text-transform: uppercase;
     padding-block: 14px;
     text-decoration: none;
@@ -77,6 +80,7 @@
     font-weight: 650;
     text-align: center;
     transition: color 0.3s ease;
+    letter-spacing: 0.6px;
   }
 
   .image-with-text-v2__arrow {
@@ -99,19 +103,18 @@
     }
 
     .image-with-text-v2__image-column {
-        /* max-width: 591px; */
-        aspect-ratio: 591 / 612.5;
-        /* overflow: hidden; */
+          flex: 0 0 50%;
+          width: auto;
+          aspect-ratio: 591 / 612.5;
     }
     
     .image-with-text-v2__content-column {
+      transform: translate3d(0px, -0.3621px, 0px);
      align-items: flex-start;
      text-align: start;
-     margin-top: 52px;
    }
 
     .image-with-text-v2__heading {
-      font-size: 39px;
       margin-bottom: 24px;
     }
 
@@ -163,7 +166,6 @@
             <svg width="8" height="11" viewBox="0 0 8 11" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M1.71655 1.02827L6.20636 5.94764L1.71655 10.2404" stroke="currentColor" stroke-width="2" class="image-with-text-v2__arrow"></path>
             </svg>
-
       </a>
     {% endif %}
 
@@ -223,7 +225,7 @@
         "type": "color",
         "id": "heading_font_color",
         "label": "Heading Text Color",
-        "default": "#121212"
+        "default": "#000"
       },
       {
         "type": "text",
