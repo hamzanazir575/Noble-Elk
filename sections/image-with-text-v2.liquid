@@ -132,6 +132,7 @@
 
  <div id="image-with-text-{{ section.id }}" class="image-with-text-v2__container">
   <div class="image-with-text-v2__image-column">
+    
     {% if section.settings.image != blank %}
       <img
         src="{{ section.settings.image | image_url: width: section.settings.image.width }}"
