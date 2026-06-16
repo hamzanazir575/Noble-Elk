@@ -18,13 +18,17 @@
 
   .image-with-text-v2__image-column {
     max-width: 591px;
-    aspect-ratio: 1 / 1;
+    width: 100%;
+    position: relative;
+    padding-top: 100%;
   }
   
   .image-with-text-v2__image {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-    display: block;
     object-fit: cover;
   }
   
@@ -104,7 +108,8 @@
 
     .image-with-text-v2__image-column {
       flex: 0 0 50%;
-      aspect-ratio: 591 / 612.5;
+      position: relative;
+      padding-top: 52%;
     }
     
     .image-with-text-v2__content-column {
