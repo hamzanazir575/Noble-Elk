@@ -111,6 +111,11 @@
       position: relative;
       padding-top: 52%;
     }
+
+    .image-with-text-v2__placeholder {
+      padding-top: 0;
+      aspect-ratio: 1 / 1;
+    }
     
     .image-with-text-v2__content-column {
       transform: translate3d(0px, -0.3621px, 0px);
@@ -131,11 +136,15 @@
       margin-bottom: 32px;
       font-size: 16px;
     }
+
+    .image-with-text-v2__description p {
+      margin: 0;
+    }
   }
 </style>
 
  <div id="image-with-text-{{ section.id }}" class="image-with-text-v2__container">
-  <div class="image-with-text-v2__image-column">
+  <div class="image-with-text-v2__image-column {% if section.settings.image == blank %}image-with-text-v2__placeholder{% endif %}">
     
     {% if section.settings.image != blank %}
       <img
@@ -158,9 +167,9 @@
     {% endif %}
 
     {% if section.settings.text != blank %}
-      <p class="image-with-text-v2__description">
+      <div class="image-with-text-v2__description">
         {{ section.settings.text }}
-      </p>
+      </div>
     {% endif %}
 
     {% if section.settings.button_label != blank and section.settings.button_link != blank %}
@@ -232,10 +241,10 @@
         "default": "#000"
       },
       {
-        "type": "text",
+        "type": "richtext",
         "id": "text",
         "label": "Description",
-        "default": "Write description here"
+        "default": "<p>Write description here</p>"
       },      
       {
         "type": "color",
