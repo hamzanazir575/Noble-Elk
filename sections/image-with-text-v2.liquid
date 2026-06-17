@@ -132,9 +132,7 @@
   <div class="image-with-text-v2__image-column {% if section.settings.image == blank %}image-with-text-v2__placeholder{% endif %}"> 
     {% if section.settings.image != blank %}
       <img
-        src="{{ section.settings.image | image_url: width: section.settings.image.width }}"
-        width="{{ section.settings.image.width }}"
-        height="{{ section.settings.image.height }}"
+        src="{{ section.settings.image | image_url: width: section.settings.image.width, height: section.settings.image.height }}"
         class="image-with-text-v2__image"
         loading="lazy">
       {% else %}
