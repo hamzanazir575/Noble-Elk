@@ -11,7 +11,7 @@
 
   .brands__title {
     color: {{ section.settings.heading_color }};
-    font-size: 16px;
+    font-size: 12.8px;
     font-weight: 600;
     margin: 0;
     text-transform: uppercase;
@@ -32,8 +32,8 @@
   }
 
   .brands__icons {
-    height: 65px;
-    width: 120px;
+    height: 52.0px;
+    width: 96.0px;
     object-fit: contain;
     filter: grayscale(100%);
     transition: filter 0.3s ease;
@@ -45,6 +45,17 @@
   .brands__icons:hover {
     filter: none;
   }
+
+  @media only screen and (min-width: 768px) {
+    .brands__title {
+    font-size: 16px;
+  }
+
+  .brands__icons {
+    height: 65px;
+    width: 120px;
+  }
+}
 
   @keyframes brands-slide {
     from {
