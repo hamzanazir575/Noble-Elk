@@ -1,63 +1,59 @@
 <style>
-  .brands__container {
+  .marquee__container {
     background-color: #ffffff;
     overflow: hidden;
   }
 
-  .brands__header {
+  .marquee__header {
     text-align: center;
     margin-bottom: 26px;
   }
 
-  .brands__title {
+  .marquee__title {
     color: {{ section.settings.heading_color }};
     font-size: 12.8px;
     font-weight: 600;
     margin: 0;
     text-transform: uppercase;
-    letter-spacing: 0;
   }
 
-  .brands__wrapper {
+  .marquee__wrapper {
     display: flex;
     align-items: center;
-    animation: brands-slide 60s linear infinite;
+    animation: marquee-slide 60s linear infinite;
   }
 
-  .brand__item {
+  .marquee__item {
     display: flex;
     align-items: center;
-    margin-right: 100px;
+    gap: 100px;
     flex-shrink: 0;
   }
 
-  .brands__icons {
-    height: 52.0px;
-    width: 96.0px;
+  .marquee__icons {
+    height: 52px;
+    width: 96px;
     object-fit: contain;
     filter: grayscale(100%);
     transition: filter 0.3s ease;
-    background-color: rgba(0, 0, 0, 0);
-    border-radius: 0;
-    border: 0 solid #e0e0e0;
   }
 
-  .brands__icons:hover {
+  .marquee__icons:hover {
     filter: none;
   }
 
   @media only screen and (min-width: 768px) {
-    .brands__title {
+    .marquee__title {
     font-size: 16px;
   }
 
-  .brands__icons {
+  .marquee__icons {
     height: 65px;
     width: 120px;
   }
 }
 
-  @keyframes brands-slide {
+  @keyframes marquee-slide {
     from {
       transform: translateX(0);
     }
@@ -68,25 +64,24 @@
   }
 </style>
 
-<div class="brands__container">
-  <div class="brands__header">
-    <h2 class="brands__title">{{ section.settings.heading }}</h2>
+<div class="marquee__container">
+  <div class="marquee__header">
+    <h2 class="marquee__title">{{ section.settings.heading }}</h2>
   </div>
-  <div class="brands__wrapper">
+  <div class="marquee__wrapper">
 
     {% for block in section.blocks %}
       {% if block.settings.logo != blank %}
-        <div class="brand__item">
+        <div class="marquee__item">
           <img
-            class="brands__icons"
-            src="{{ block.settings.logo |  image_url: width:  block.settings.logo.width  }}"
-            width="{{ block.settings.logo.width }}"
-            height="{{ block.settings.logo.height }}"
-            loading="lazy"
-            alt="">
+            class="marquee__icons"
+            src="{{ block.settings.logo |  image_url: width:  block.settings.logo.width, height: block.settings.logo.height  }}"
+            loading="lazy">
         </div>
       {% else %}
-        {{ 'product-1' | placeholder_svg_tag: "brands__icons" }}
+      <div class="marquee__items">
+        {{ 'product-1' | placeholder_svg_tag: "marquee__icons" }}
+      </div>
       {% endif %}
     {% endfor %}
   </div>
@@ -94,7 +89,7 @@
 
 {% schema %}
 {
-    "name": "Brands Marquee",
+    "name": "Marquee",
     "tag": "section",
     "class": "brands",
     "settings":[
@@ -127,7 +122,7 @@
     "max_blocks": 10,
     "presets": [
         {
-            "name": "Brands Marquee",
+            "name": "Marquee",
             "blocks": [
                 {
                     "type": "brand"

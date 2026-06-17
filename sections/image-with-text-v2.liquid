@@ -4,16 +4,14 @@
 }
 
   .image-with-text-v2__container {
+    flex-direction: var(--layout-direction);
     max-width: 1220px;
     display: flex;
-    flex-direction: var(--layout-direction);
     align-items: center;
     gap: 30px;
     background-color: #fff;
-    padding-block: 60px;
-    padding-inline: 20px;
+    padding: 60px 20px;
     margin-inline: auto;
-    box-sizing: border-box;
   }
 
   .image-with-text-v2__image-column {
@@ -47,9 +45,7 @@
     font-size: 39px;
     line-height: 1.2;
     font-weight: 400;
-    margin: 0;
     margin-bottom: 16px;
-    letter-spacing: 0.6px;
     text-transform: uppercase;
   }
 
@@ -68,14 +64,15 @@
     font-size: 16px;
     font-weight: 400;
     line-height: 1.6;
-    letter-spacing: 0.6px;
-    margin: 0;
     margin-bottom: 24px;
+  }
+
+  .image-with-text-v2__description p {
+    margin: 0;
   }
 
   .image-with-text-v2__button {
     color: {{ section.settings.btn_font_color }};
-    display: inline-flex;
     align-items: center;
     gap: 4px;
     text-transform: uppercase;
@@ -87,12 +84,6 @@
     transition: color 0.3s ease;
     letter-spacing: 0.6px;
   }
-
-  .image-with-text-v2__arrow {
-    width: 16px;
-    height: 16px;
-    transition: color .3s ease;
-}
 
   .image-with-text-v2__button:hover {
     color: #946d16;
@@ -108,7 +99,6 @@
     }
 
     .image-with-text-v2__image-column {
-      flex: 0 0 50%;
       position: relative;
       padding-top: 52%;
     }
@@ -119,7 +109,6 @@
     }
     
     .image-with-text-v2__content-column {
-      transform: translate3d(0px, -0.3621px, 0px);
       align-items: flex-start;
       text-align: start;
    }
@@ -133,20 +122,14 @@
     }
 
     .image-with-text-v2__description {
-      margin: 0;
       margin-bottom: 32px;
       font-size: 16px;
-    }
-
-    .image-with-text-v2__description p {
-      margin: 0;
     }
   }
 </style>
 
- <div id="image-with-text-{{ section.id }}" class="image-with-text-v2__container">
-  <div class="image-with-text-v2__image-column {% if section.settings.image == blank %}image-with-text-v2__placeholder{% endif %}">
-    
+<div id="image-with-text-{{ section.id }}" class="image-with-text-v2__container">
+  <div class="image-with-text-v2__image-column {% if section.settings.image == blank %}image-with-text-v2__placeholder{% endif %}"> 
     {% if section.settings.image != blank %}
       <img
         src="{{ section.settings.image | image_url: width: section.settings.image.width }}"
@@ -154,8 +137,8 @@
         height="{{ section.settings.image.height }}"
         class="image-with-text-v2__image"
         loading="lazy">
-    {% else %}
-      {{ 'product-1' | placeholder_svg_tag }}
+      {% else %}
+        {{ 'product-1' | placeholder_svg_tag }}
     {% endif %}
 
   </div>
@@ -176,10 +159,9 @@
     {% if section.settings.button_label != blank and section.settings.button_link != blank %}
       <a href="{{ section.settings.button_link }}" class="image-with-text-v2__button">
         {{ section.settings.button_label }}
-
-            <svg width="8" height="11" viewBox="0 0 8 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M1.71655 1.02827L6.20636 5.94764L1.71655 10.2404" stroke="currentColor" stroke-width="2" class="image-with-text-v2__arrow"></path>
-            </svg>
+          <svg width="8" height="11" viewBox="0 0 8 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1.71655 1.02827L6.20636 5.94764L1.71655 10.2404" stroke="currentColor" stroke-width="2"></path>
+          </svg>
       </a>
     {% endif %}
 
@@ -195,7 +177,7 @@
       {
         "type": "image_picker",
         "id": "image",
-        "label": "Product Image"
+        "label": "Image"
       },
       {
         "type": "select",
@@ -258,17 +240,17 @@
         "id": "button_label",
         "label": "Button Label",
         "default": "Buy Now"
-      }, 
+      },  
+      {
+        "type": "url",
+        "id": "button_link",
+        "label": "Button Link"
+      },
       {
         "type": "color",
         "id": "btn_font_color",
         "label": "Button Text Color",
         "default": "#D3AE5D"
-      }, 
-      {
-        "type": "url",
-        "id": "button_link",
-        "label": "Button Link"
       }
     ],
     "presets": [
