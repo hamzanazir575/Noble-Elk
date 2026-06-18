@@ -398,7 +398,10 @@
       "name": "FAQs",
       "settings": {
         "image": "shopify://shop_images/elk-cow-calf-5.webp",
-        "heading": "Frequently Asked Questions"
+        "heading": "Frequently Asked Questions",
+        "button_label": "View All Faq",
+        "button_link": "shopify://collections/apparels-collections-copy",
+        "btn_font_color": "#b88921"
       }
     }
   },
