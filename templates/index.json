@@ -356,6 +356,50 @@
         "title_color": "#ffffff",
         "text_color": "#ffffff"
       }
+    },
+    "faq_QDaczh": {
+      "type": "FAQ",
+      "blocks": {
+        "faq_i7QcLy": {
+          "type": "faq",
+          "settings": {
+            "question": "How do I know if an antler is good quality?",
+            "answer": "A high-quality elk antler will be dense, durable, and free from excessive cracks or brittleness. Good antlers will feel heavy for their size, have a smooth texture with some natural grooves, and won’t splinter easily. At The Noble Elk, we carefully select each antler to ensure it meets these standards, so you and your dog get only the best."
+          }
+        },
+        "faq_eB4hNn": {
+          "type": "faq",
+          "settings": {
+            "question": "Are elk antler chews safe for dogs?",
+            "answer": "Yes, when sized correctly and supervised, they’re safe, long-lasting, and naturally support dental health without splintering."
+          }
+        },
+        "faq_DBHgMU": {
+          "type": "faq",
+          "settings": {
+            "question": "Can athletes take velvet antler?",
+            "answer": "Yes, many athletes use them for joint support and recovery, but check with your doctor or sport’s guidelines before starting. Velvet antler is naturally rich in compounds like collagen, glucosamine, and chondroitin, which support joint mobility and may help with post-workout recovery."
+          }
+        },
+        "faq_An6bdf": {
+          "type": "faq",
+          "settings": {
+            "question": "What sets elk meat apart nutritionally?",
+            "answer": "Elk meat is a lean red meat, high in protein and lower in fat, cholesterol, and calories compared to conventional meats like beef or pork. It also offers valuable nutrients like iron, zinc, and phosphorus."
+          }
+        }
+      },
+      "block_order": [
+        "faq_i7QcLy",
+        "faq_eB4hNn",
+        "faq_DBHgMU",
+        "faq_An6bdf"
+      ],
+      "name": "FAQs",
+      "settings": {
+        "image": "shopify://shop_images/elk-cow-calf-5.webp",
+        "heading": "Frequently Asked Questions"
+      }
     }
   },
   "order": [
@@ -368,6 +412,7 @@
     "image_with_text_v2_Jy6Ppz",
     "marquee_T6aPWM",
     "reviews_FWFjRV",
-    "info_cards_HqJe7E"
+    "info_cards_HqJe7E",
+    "faq_QDaczh"
   ]
 }
