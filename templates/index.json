@@ -277,6 +277,7 @@
           "settings": {
             "review_icon": "shopify://shop_images/stars-icons.svg",
             "review_text": "“My wife and I have gotten several bottles of the elk antler supplements, and every time we've taken them its help boost us mentally and physically. Never had an issue with customer service as well. Look forward to trying other products by them.”",
+            "review_text_color": "#161616",
             "reviewer_name": "John Hick"
           }
         },
@@ -285,6 +286,7 @@
           "settings": {
             "review_icon": "shopify://shop_images/stars-icons.svg",
             "review_text": "“THE BEST CHEWS EVER! These are the best antler chews I've ever bought for our dogs!! We have three labs and these antlers keep them satisfied for hours, and last a super long time! No mess, no splintering...I highly recommend 😁”",
+            "review_text_color": "#161616",
             "reviewer_name": "Dawn Fitch"
           }
         },
@@ -293,6 +295,7 @@
           "settings": {
             "review_icon": "shopify://shop_images/stars-icons.svg",
             "review_text": "“My pain ended after 2 weeks of using elk velvet antler. Now I am able to walk with no pain, a little pressure. I no longer am planning to have surgery to get a hip replacement. So amazing, glad I took a chance and tried this. I saw that in a medical book that this worked for dogs and looked it up and found this and it works!”",
+            "review_text_color": "#161616",
             "reviewer_name": "Pamela"
           }
         }
@@ -305,13 +308,50 @@
       "name": "Reviews",
       "settings": {
         "heading": "Words From The Herd",
-        "heading_color": "#1C1C1C",
+        "heading_color": "#1c1c1c",
         "background_text": "Naturally\nRaised.\nNaturally\nBetter.",
         "background_text_color": "#886415",
         "button_label": "See More Reviews",
         "button_link": "#",
-        "button_text_color": "#FFFFFF",
-        "button_background_color": "#D3AE5D"
+        "button_text_color": "#ffffff",
+        "button_background_color": "#d3ae5d"
+      }
+    },
+    "info_cards_PQJdyz": {
+      "type": "info-cards",
+      "blocks": {
+        "card_VrBkAU": {
+          "type": "card",
+          "settings": {
+            "title": "Direct From The Source",
+            "text": "Write your information here."
+          }
+        },
+        "card_9Bg3ja": {
+          "type": "card",
+          "settings": {
+            "title": "Direct From The Source",
+            "text": "Write your information here."
+          }
+        },
+        "card_DG8dU7": {
+          "type": "card",
+          "settings": {
+            "title": "Direct From The Source",
+            "text": "Write your information here."
+          }
+        }
+      },
+      "block_order": [
+        "card_VrBkAU",
+        "card_9Bg3ja",
+        "card_DG8dU7"
+      ],
+      "name": "Info Cards",
+      "settings": {
+        "background_image": "shopify://shop_images/info-cards-bg-image.png",
+        "title_color": "#FFFFFF",
+        "text_color": "#FFFFFF"
       }
     }
   },
@@ -324,6 +364,7 @@
     "image_with_text_v2_RKeirp",
     "image_with_text_v2_Jy6Ppz",
     "marquee_T6aPWM",
-    "reviews_FWFjRV"
+    "reviews_FWFjRV",
+    "info_cards_PQJdyz"
   ]
 }
