@@ -1,15 +1,12 @@
 <style>
   .reviews {
     position: relative;
-    background-color: white;
     overflow: hidden;
   }
 
   .reviews__container {
-    background-color: white;
     max-width: 1100px;
-    padding-inline: 20px;
-    padding-block: 200px 123px;
+    padding: 200px 20px 123px;
     margin: 0 auto;
     text-align: center;
   }
@@ -17,7 +14,6 @@
   .reviews__heading {
     color: {{ section.settings.heading_color }};
     font-size: 17px;
-    letter-spacing: 0.81px;
     font-weight: 600;
     margin-bottom: 50px;
     text-align: center;
@@ -56,7 +52,7 @@
   }
 
   .reviews__info {
-    margin: 0 0 25px 0;
+    margin: 0 0 25px;
     font-size: 15px;
     font-weight: 400;
     line-height: 1.6;
@@ -120,162 +116,155 @@
     }
   }
 </style>
-<div class="reviews">
-  <div class="reviews__container">
-    {% if section.settings.heading != blank %}
-      <h2 class="reviews__heading">
-        {{ section.settings.heading }}
-      </h2>
-    {% endif %}
 
-    {% if section.settings.background_text != blank %}
-      <div class="reviews__bg-text">
-        {{ section.settings.background_text | newline_to_br }}
-      </div>
-    {% endif %}
+<div class="reviews__container">
+  {% if section.settings.heading != blank %}
+    <h2 class="reviews__heading">
+      {{ section.settings.heading }}
+    </h2>
+  {% endif %}
 
-    <div class="reviews__details">
-      {% for block in section.blocks %}
-
-        <div class="reviews__inner">
-          {% if block.settings.review_icon != blank %}
-            <img
-              class="reviews__icon"
-              src="{{ block.settings.review_icon | image_url: width: block.settings.review_icon.width, height: block.settings.review_icon.height }}"
-              loading="lazy">
-          {% endif %}
-
-          {% if block.settings.review_text != blank %}
-            <p style="{{ block.settings.review_text_color }}" class="reviews__info">
-              {{ block.settings.review_text }}
-            </p>
-          {% endif %}
-
-          {% if block.settings.reviewer_name != blank %}
-            <h3 class="reviews__name">
-              {{ block.settings.reviewer_name }}
-            </h3>
-          {% endif %}
-
-        </div>
-      {% endfor %}
-
+  {% if section.settings.background_text != blank %}
+    <div class="reviews__bg-text">
+      {{ section.settings.background_text | newline_to_br }}
     </div>
-    {% if section.settings.button_label != blank and section.settings.button_link != blank %}
-      <a
-        class="reviews__button"
-        href="{{ section.settings.button_link }}">
-        {{ section.settings.button_label }}
-      </a>
-    {% endif %}
+  {% endif %}
+
+  <div class="reviews__details">
+    {% for block in section.blocks %}
+      <div class="reviews__inner">
+        {% if block.settings.review_icon != blank %}
+          <img
+            class="reviews__icon"
+            src="{{ block.settings.review_icon | image_url: width: block.settings.review_icon.width, height: block.settings.review_icon.height }}"
+            loading="lazy">
+        {% endif %}
+
+        {% if block.settings.review_text != blank %}
+          <p style="{{ block.settings.review_text_color }}" class="reviews__info">
+            {{ block.settings.review_text }}
+          </p>
+        {% endif %}
+
+        {% if block.settings.reviewer_name != blank %}
+          <h3 class="reviews__name">
+            {{ block.settings.reviewer_name }}
+          </h3>
+        {% endif %}
+
+      </div>
+    {% endfor %}
 
   </div>
+  {% if section.settings.button_label != blank and section.settings.button_link != blank %}
+    <a class="reviews__button" href="{{ section.settings.button_link }}">
+      {{ section.settings.button_label }}
+    </a>
+  {% endif %}
+
 </div>
 
 {% schema %}
-{
-  "name": "Reviews",
-  "tag": "section",
-  "class": "reviews",
-  "settings": [
-    {
-      "type": "text",
-      "id": "heading",
-      "label": "Heading",
-      "default": "Words From The Herd"
-    },
-    {
-      "type": "color",
-      "id": "heading_color",
-      "label": "Heading Color",
-      "default": "#1C1C1C"
-    },
-    {
-      "type": "textarea",
-      "id": "background_text",
-      "label": "Background Text",
-      "default": "Naturally\nRaised\nNaturally\nBetter"
-    },
-    {
-      "type": "color",
-      "id": "background_text_color",
-      "label": "Background Text Color",
-      "default": "#886415"
-    },
-    {
-      "type": "text",
-      "id": "button_label",
-      "label": "Button Label",
-      "default": "See More Reviews"
-    },
-    {
-      "type": "url",
-      "id": "button_link",
-      "label": "Button Link"
-    },
-    {
-      "type": "color",
-      "id": "button_text_color",
-      "label": "Button Text Color",
-      "default": "#FFFFFF"
-    },
-    {
-      "type": "color",
-      "id": "button_background_color",
-      "label": "Button Background Color",
-      "default": "#D3AE5D"
-    }
-  ],
-
-  "blocks": [
-    {
-      "type": "review",
-      "name": "Review",
-      "settings": [
-        {
-          "type": "image_picker",
-          "id": "review_icon",
-          "label": "Image"
-        },
-        {
-          "type": "textarea",
-          "id": "review_text",
-          "label": "Review Text",
-          "default": "Write your customer review here."
-        },
-        {
-          "type": "color",
-          "id": "review_text_color",
-          "label": "Text Color",
-          "default": "#161616"
-        },
-        {
-          "type": "text",
-          "id": "reviewer_name",
-          "label": "Reviewer Name",
-          "default": "John Doe"
-        }
-      ]
-    }
-  ],
-
-  "max_blocks": 3,
-
-  "presets": [
-    {
-      "name": "Reviews",
-      "blocks": [
-        {
-          "type": "review"
-        },
-        {
-          "type": "review"
-        },
-        {
-          "type": "review"
-        }
-      ]
-    }
-  ]
-}
+  {
+    "name": "Reviews",
+    "tag": "section",
+    "class": "reviews",
+    "settings": [
+      {
+        "type": "text",
+        "id": "heading",
+        "label": "Heading",
+        "default": "Words From The Herd"
+      },
+      {
+        "type": "color",
+        "id": "heading_color",
+        "label": "Heading Color",
+        "default": "#1C1C1C"
+      },
+      {
+        "type": "textarea",
+        "id": "background_text",
+        "label": "Background Text",
+        "default": "Naturally\nRaised\nNaturally\nBetter"
+      },
+      {
+        "type": "color",
+        "id": "background_text_color",
+        "label": "Background Text Color",
+        "default": "#886415"
+      },
+      {
+        "type": "text",
+        "id": "button_label",
+        "label": "Button Label",
+        "default": "See More Reviews"
+      },
+      {
+        "type": "url",
+        "id": "button_link",
+        "label": "Button Link"
+      },
+      {
+        "type": "color",
+        "id": "button_text_color",
+        "label": "Button Text Color",
+        "default": "#FFFFFF"
+      },
+      {
+        "type": "color",
+        "id": "button_background_color",
+        "label": "Button Background Color",
+        "default": "#D3AE5D"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "review",
+        "name": "Review",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "review_icon",
+            "label": "Image"
+          },
+          {
+            "type": "textarea",
+            "id": "review_text",
+            "label": "Review Text",
+            "default": "Write your customer review here."
+          },
+          {
+            "type": "color",
+            "id": "review_text_color",
+            "label": "Text Color",
+            "default": "#161616"
+          },
+          {
+            "type": "text",
+            "id": "reviewer_name",
+            "label": "Reviewer Name",
+            "default": "John Doe"
+          }
+        ]
+      }
+    ],
+    "max_blocks": 3,
+    "presets": [
+      {
+        "name": "Reviews",
+        "blocks": [
+          {
+            "type": "review"
+          },
+          {
+            "type": "review"
+          },
+          {
+            "type": "review"
+          }
+        ]
+      }
+    ]
+  }
 {% endschema %}

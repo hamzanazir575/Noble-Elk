@@ -10,7 +10,6 @@
 
   .info-cards__container {
     max-width: 1002px;
-    width: 100%;
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
@@ -46,7 +45,6 @@
     color: {{ section.settings.title_color }};
     font-size: 17px;
     font-weight: 500;
-    letter-spacing: 1px;
     text-transform: uppercase;
     margin-bottom: 13px;
   }
@@ -77,13 +75,11 @@
   }
 </style>
 
-<div class="info-cards">
-    <div
-  class="info-cards"
-  {% unless section.settings.background_image != blank %}
-    style="background-color: #515151;"
-  {% endunless %}
->
+<div class="info-cards"
+ {% unless section.settings.background_image != blank %}
+    style="background-color: #707070;"
+  {% endunless %}>
+
   <div class="info-cards__container">
     {% for block in section.blocks %}
       <div class="info-cards__item">
