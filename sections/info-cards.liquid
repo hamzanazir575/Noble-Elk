@@ -93,17 +93,17 @@
 
         {% if block.settings.title != blank %}
           <div class="info-cards__title">
-            <p>{{ block.settings.title }}</p>
-            {% else %}
-            <p>WRITE HEADING HERE</p>
+            <p>
+                {{ block.settings.title }}
+                {% else %}
+                WRITE TITLE HERE
+            </p>
           </div>
         {% endif %}
 
         {% if block.settings.text != blank %}
           <div class="info-cards__text">
             <p>{{ block.settings.text }}</p>
-             {% else %}
-            <p>WRITE REVIEW HERE</p>
           </div>
         {% endif %}
 
