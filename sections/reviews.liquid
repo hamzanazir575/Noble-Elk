@@ -146,7 +146,7 @@
           {% endif %}
 
           {% if block.settings.review_text != blank %}
-            <p class="reviews__info">
+            <p style="{{ block.settings.review_text_color }}" class="reviews__info">
               {{ block.settings.review_text }}
             </p>
           {% endif %}
@@ -242,6 +242,12 @@
           "id": "review_text",
           "label": "Review Text",
           "default": "Write your customer review here."
+        },
+        {
+          "type": "color",
+          "id": "review_text_color",
+          "label": "Text Color",
+          "default": "#161616"
         },
         {
           "type": "text",
