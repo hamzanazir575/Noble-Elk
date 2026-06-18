@@ -25,22 +25,21 @@
   }
 
   .reviews__bg-text {
-    opacity: 0.0779;
     color: {{ section.settings.background_text_color }};
+    opacity: 0.07;
     font-size: 50px;
     font-weight: 700;
     line-height: 1;
     letter-spacing: 5px;
     text-transform: uppercase;
     text-align: left;
-    width: 100%;
     position: absolute;
     z-index: 0;
     top: 204px;
     left: -5px;
   }
 
-  .review__details {
+  .reviews__details {
     display: flex;
     justify-content: flex-start;
     flex-wrap: wrap;
@@ -93,19 +92,14 @@
     background-color: #946d16;
   }
 
-
   @media screen and (min-width: 768px) {
-
     .reviews__inner {
       flex: 0 0 calc(50% - 15px);
       max-width: calc(50% - 15px);
     }
-
   }
 
-
   @media screen and (min-width: 1025px) {
-
     .reviews__heading {
       margin-bottom: 98px;
     }
@@ -117,16 +111,13 @@
       letter-spacing: 11.86px;
     }
 
-    .review__details {
+    .reviews__details {
       justify-content: space-between;
-      gap: 0;
     }
 
     .reviews__inner {
-      flex: initial;
       max-width: 314px;
     }
-
   }
 </style>
 <div class="reviews">
@@ -143,7 +134,7 @@
       </div>
     {% endif %}
 
-    <div class="review__details">
+    <div class="reviews__details">
       {% for block in section.blocks %}
 
         <div class="reviews__inner">
