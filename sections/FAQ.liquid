@@ -5,10 +5,11 @@
 
   .faq-container {
     display: flex;
+    gap: 78px;
   }
 
   .faq-image {
-    /* width: 50%; */
+    width: 50%;
   }
 
   .faq-image img {
@@ -20,32 +21,35 @@
 
   .faq-content {
     width: 50%;
-    padding: 120px 80px;
+    padding: 154px 40px;
   }
 
   .faq-heading {
-    font-size: 26px;
-    font-weight: 400;
-    letter-spacing: 2px;
+    font-size: 21px;
+    font-weight: 550;
+    letter-spacing: 0.81px;
     text-transform: uppercase;
     color: #1c1c1c;
-    margin: 0 0 80px;
+    margin: 0;
+    margin-bottom: 49px;
+    padding-bottom: 27px;
     position: relative;
   }
 
   .faq-heading::after {
     content: "";
-    width: 55px;
+    width: 47px;
     height: 4px;
-    background-color: #0b6b30;
+    background-color: #005b22;
     position: absolute;
     left: 0;
-    bottom: -25px;
+    bottom: 0;
   }
 
   .faq-item {
     border-bottom: 1px solid #dddddd;
-    padding: 30px 0;
+    padding-bottom: 20px;
+    line-height: 1.8;
   }
 
   .faq-question {
@@ -57,12 +61,12 @@
   }
 
   .faq-question h3 {
-    font-size: 18px;
-    font-weight: 700;
+    font-size: 15px;
+    font-weight: 650;
     text-transform: uppercase;
+    padding: 28px 0 18px 0;
     margin: 0;
-    color: #111;
-    letter-spacing: 0.5px;
+    color: #1c1c1c;
   }
 
   .faq-icon {
@@ -80,18 +84,31 @@
   }
 
   .faq-answer p {
-    margin: 25px 0 10px;
-    font-size: 16px;
-    line-height: 1.8;
-    color: #555;
+    margin-bottom: 18px;
+    font-size: 14px;
+    color: #444;
   }
 
   .faq-item.active .faq-answer {
     max-height: 300px;
   }
 
+  .faq-button {
+    color: {{ section.settings.btn_font_color }};
+    text-transform: uppercase;
+    padding-block: 14px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 650;
+    text-align: center;
+    transition: color 0.3s ease;
+  }
 
-  @media screen and (max-width: 991px) {
+  .faq-button:hover {
+    color: #946d16;
+  }
+
+  @media screen and (max-width: 992px) {
 
     .faq-container {
       flex-direction: column;
@@ -103,16 +120,11 @@
     }
 
     .faq-content {
-      padding: 60px 25px;
+      padding: 40px 20px;
     }
 
     .faq-heading {
-      font-size: 22px;
       margin-bottom: 60px;
-    }
-
-    .faq-question h3 {
-      font-size: 16px;
     }
   }
 
@@ -123,7 +135,7 @@
     <div class="faq-image">
       {% if section.settings.image != blank %}
         <img 
-          src="{{ section.settings.image | image_url: width: 2000 }}"
+          src="{{ section.settings.image | image_url: width: section.settings.image.width, height: section.settings.image.height }}"
           alt="{{ section.settings.image.alt }}"
           loading="lazy">
           {% else %}
@@ -159,6 +171,12 @@
           </div>
         </div>
       {% endfor %}
+
+      {% if section.settings.button_label != blank and section.settings.button_link != blank %}
+        <a class="faq__button" href="{{ section.settings.button_link }}">
+          {{ section.settings.button_label }}
+        </a>
+      {% endif %}
 
     </div>
   </div>
@@ -223,14 +241,23 @@
           "label": "Question",
           "default": "Write your question"
         },
-
         {
           "type": "textarea",
           "id": "answer",
           "label": "Answer",
           "default": "Write your answer here"
+        },
+        {
+          "type": "text",
+          "id": "button_label",
+          "label": "Button Label",
+          "default": "view all faq"
+        },
+        {
+          "type": "url",
+          "id": "button_link",
+          "label": "Button Link"
         }
-
       ]
     }
   ],
