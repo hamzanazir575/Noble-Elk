@@ -5,7 +5,7 @@
 
   .faq-container {
     display: flex;
-    align-items: center;
+    align-items: normal;
     gap: 78px;
   }
 
@@ -58,7 +58,6 @@
     justify-content: space-between;
     align-items: center;
     cursor: pointer;
-    gap: 20px;
   }
 
   .faq-question h3 {
@@ -112,8 +111,13 @@
     color: #946d16;
   }
 
-  @media screen and (max-width: 992px) {
+  @media screen and (min-width: 1117px) {
+  .faq-container {
+    align-items: center;
+  }
+}
 
+  @media screen and (max-width: 992px) {
     .faq-container {
       flex-direction: column;
     }
