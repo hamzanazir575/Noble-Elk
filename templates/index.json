@@ -268,6 +268,51 @@
         "heading": "Find us in",
         "heading_color": "#333333"
       }
+    },
+    "reviews_FWFjRV": {
+      "type": "reviews",
+      "blocks": {
+        "review_MVkygj": {
+          "type": "review",
+          "settings": {
+            "review_icon": "shopify://shop_images/stars-icons.svg",
+            "review_text": "“My wife and I have gotten several bottles of the elk antler supplements, and every time we've taken them its help boost us mentally and physically. Never had an issue with customer service as well. Look forward to trying other products by them.”",
+            "reviewer_name": "John Hick"
+          }
+        },
+        "review_kzDkkU": {
+          "type": "review",
+          "settings": {
+            "review_icon": "shopify://shop_images/stars-icons.svg",
+            "review_text": "“THE BEST CHEWS EVER! These are the best antler chews I've ever bought for our dogs!! We have three labs and these antlers keep them satisfied for hours, and last a super long time! No mess, no splintering...I highly recommend 😁”",
+            "reviewer_name": "Dawn Fitch"
+          }
+        },
+        "review_WfUkTe": {
+          "type": "review",
+          "settings": {
+            "review_icon": "shopify://shop_images/stars-icons.svg",
+            "review_text": "“My pain ended after 2 weeks of using elk velvet antler. Now I am able to walk with no pain, a little pressure. I no longer am planning to have surgery to get a hip replacement. So amazing, glad I took a chance and tried this. I saw that in a medical book that this worked for dogs and looked it up and found this and it works!”",
+            "reviewer_name": "Pamela"
+          }
+        }
+      },
+      "block_order": [
+        "review_MVkygj",
+        "review_kzDkkU",
+        "review_WfUkTe"
+      ],
+      "name": "Reviews",
+      "settings": {
+        "heading": "Words From The Herd",
+        "heading_color": "#1C1C1C",
+        "background_text": "Naturally.\nRaised.\nNaturally.\nBetter.",
+        "background_text_color": "#886415",
+        "button_label": "See More Reviews",
+        "button_link": "#",
+        "button_text_color": "#FFFFFF",
+        "button_background_color": "#D3AE5D"
+      }
     }
   },
   "order": [
@@ -278,6 +323,7 @@
     "featured_collection_v1_habyDX",
     "image_with_text_v2_RKeirp",
     "image_with_text_v2_Jy6Ppz",
-    "marquee_T6aPWM"
+    "marquee_T6aPWM",
+    "reviews_FWFjRV"
   ]
 }
