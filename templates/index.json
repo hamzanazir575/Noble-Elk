@@ -181,8 +181,8 @@
         "text": "<p>All-natural elk antler dog chews, freeze-dried elk treats, and velvet antler hip+joint supplements.</p>",
         "description_font_color": "#121212",
         "button_label": "Pet Products",
-        "btn_font_color": "#d3ae5d",
-        "button_link": "shopify://products/antler-chews"
+        "button_link": "shopify://products/antler-chews",
+        "btn_font_color": "#d3ae5d"
       }
     },
     "image_with_text_v2_Jy6Ppz": {
@@ -192,13 +192,81 @@
         "image": "shopify://shop_images/huge_deer.webp",
         "layout": "row-reverse",
         "mobile_layout": "column",
-        "heading": "a focused approach to breeding",
+        "heading": "A focused approach to breeding",
         "heading_font_color": "#000",
-        "text": "<p>Our breeding program is made up of NAEBA Gold Registered pedigrees of bulls with a track record of producing high scoring typical and non-typical antler. We also aim to breed large bodied animals that are perfect for the meat market. Our elk herd is CWD tested and accredited.<br/><br/>Check out the pedigree of our elk herd!</p>",
+        "text": "<p>Our breeding program is made up of NAEBA Gold Registered pedigrees of bulls with a track record of producing high scoring typical and non-typical antler. We also aim to breed large bodied animals that are perfect for the meat market. Our elk herd is CWD tested and accredited.Check out the pedigree of our elk herd!</p>",
         "description_font_color": "#595959",
         "button_label": "view the herd",
-        "btn_font_color": "#d3ae5d",
-        "button_link": "shopify://products/elk-meat"
+        "button_link": "shopify://products/elk-meat",
+        "btn_font_color": "#d3ae5d"
+      }
+    },
+    "marquee_T6aPWM": {
+      "type": "marquee",
+      "blocks": {
+        "logo_8VdWrp": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/Amazon_logo_svg.png"
+          }
+        },
+        "logo_kdpNDE": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/Walmart-Logo-PNG-Transparent.png-scaled.png"
+          }
+        },
+        "logo_eELPEM": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/Natural_Grocers_Logo.avif"
+          }
+        },
+        "logo_aHNqfd": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/chewy-logo-logo-600x181.avif"
+          }
+        },
+        "logo_Vz8Lfm": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/Amazon_logo_svg.png"
+          }
+        },
+        "logo_nTdGdE": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/Walmart-Logo-PNG-Transparent.png-scaled.png"
+          }
+        },
+        "logo_j6WfyG": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/Natural_Grocers_Logo.avif"
+          }
+        },
+        "logo_YLTyMR": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/chewy-logo-logo-600x181.avif"
+          }
+        }
+      },
+      "block_order": [
+        "logo_8VdWrp",
+        "logo_kdpNDE",
+        "logo_eELPEM",
+        "logo_aHNqfd",
+        "logo_Vz8Lfm",
+        "logo_nTdGdE",
+        "logo_j6WfyG",
+        "logo_YLTyMR"
+      ],
+      "name": "Marquee",
+      "settings": {
+        "heading": "Find us in",
+        "heading_color": "#333333"
       }
     }
   },
@@ -209,6 +277,7 @@
     "image_with_text_v1_Dh8jzA",
     "featured_collection_v1_habyDX",
     "image_with_text_v2_RKeirp",
-    "image_with_text_v2_Jy6Ppz"
+    "image_with_text_v2_Jy6Ppz",
+    "marquee_T6aPWM"
   ]
 }
