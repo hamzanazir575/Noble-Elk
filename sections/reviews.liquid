@@ -1,0 +1,286 @@
+<style>
+  .reviews {
+    position: relative;
+    background-color: white;
+    overflow: hidden;
+  }
+
+  .reviews__container {
+    background-color: white;
+    max-width: 1100px;
+    padding-inline: 20px;
+    padding-block: 210px 123px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .reviews__heading {
+    color: {{ section.settings.heading_color }};
+    font-size: 17px;
+    letter-spacing: 0.81px;
+    font-weight: 600;
+    margin-bottom: 50px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  .reviews__bg-text {
+    opacity: 0.0779;
+    color: {{ section.settings.background_text_color }};
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    text-align: left;
+    width: 100%;
+    position: absolute;
+    z-index: 0;
+    top: 204px;
+    left: -5px;
+  }
+
+  .review__details {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 18px 30px;
+  }
+
+  .reviews__inner {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .reviews__icon {
+    margin-bottom: 25px;
+  }
+
+  .reviews__info {
+    margin: 0 0 25px 0;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.6;
+    letter-spacing: -0.01px;
+  }
+
+  .reviews__name {
+    color: #161616;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.6;
+    letter-spacing: -0.01px;
+    text-transform: capitalize;
+  }
+
+  .reviews__button {
+    color: {{ section.settings.button_text_color }};
+    background-color: {{ section.settings.button_background_color }};
+    font-size: 15px;
+    font-weight: 550;
+    line-height: 1.4;
+    text-transform: uppercase;
+    margin-top: 72px;
+    letter-spacing: 1px;
+    padding: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    text-decoration: none;
+    display: inline-block;
+  }
+
+  .reviews__button:hover {
+    background-color: #946d16;
+  }
+
+
+  /* Tablet */
+  @media screen and (min-width: 768px) {
+
+    .reviews__inner {
+      flex: 0 0 calc(50% - 15px);
+      max-width: calc(50% - 15px);
+    }
+
+  }
+
+
+  /* Desktop */
+  @media screen and (min-width: 1025px) {
+
+    .reviews__heading {
+      margin-bottom: 98px;
+    }
+
+    .reviews__bg-text {
+      top: 80px;
+      font-size: 90.94px;
+      line-height: 1.14;
+      letter-spacing: 11.86px;
+    }
+
+    .review__details {
+      justify-content: space-between;
+      gap: 0;
+    }
+
+    .reviews__inner {
+      flex: initial;
+      max-width: 314px;
+    }
+
+  }
+</style>
+<div class="reviews">
+  <div class="reviews__container">
+    {% if section.settings.heading != blank %}
+      <h2 class="reviews__heading">
+        {{ section.settings.heading }}
+      </h2>
+    {% endif %}
+
+    {% if section.settings.background_text != blank %}
+      <div class="reviews__bg-text">
+        {{ section.settings.background_text | newline_to_br }}
+      </div>
+    {% endif %}
+
+    <div class="review__details">
+      {% for block in section.blocks %}
+
+        <div class="reviews__inner">
+          {% if block.settings.review_icon != blank %}
+            <img
+              class="reviews__icon"
+              src="{{ block.settings.review_icon | image_url: width: block.settings.review_icon.width, height: block.settings.review_icon.height }}"
+              loading="lazy">
+          {% endif %}
+
+          {% if block.settings.review_text != blank %}
+            <p class="reviews__info">
+              {{ block.settings.review_text }}
+            </p>
+          {% endif %}
+
+          {% if block.settings.reviewer_name != blank %}
+            <h3 class="reviews__name">
+              {{ block.settings.reviewer_name }}
+            </h3>
+          {% endif %}
+
+        </div>
+      {% endfor %}
+
+    </div>
+    {% if section.settings.button_label != blank and section.settings.button_link != blank %}
+      <a
+        class="reviews__button"
+        href="{{ section.settings.button_link }}">
+        {{ section.settings.button_label }}
+      </a>
+    {% endif %}
+
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Reviews",
+  "tag": "section",
+  "class": "reviews",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Words From The Herd"
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "Heading Color",
+      "default": "#1C1C1C"
+    },
+    {
+      "type": "textarea",
+      "id": "background_text",
+      "label": "Background Text",
+      "default": "Naturally\nRaised\nNaturally\nBetter"
+    },
+    {
+      "type": "color",
+      "id": "background_text_color",
+      "label": "Background Text Color",
+      "default": "#886415"
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Button Label",
+      "default": "See More Reviews"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button Link"
+    },
+    {
+      "type": "color",
+      "id": "button_text_color",
+      "label": "Button Text Color",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "color",
+      "id": "button_background_color",
+      "label": "Button Background Color",
+      "default": "#D3AE5D"
+    }
+  ],
+
+  "blocks": [
+    {
+      "type": "review",
+      "name": "Review",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "review_icon",
+          "label": "Image"
+        },
+        {
+          "type": "textarea",
+          "id": "review_text",
+          "label": "Review Text",
+          "default": "Write your customer review here."
+        },
+        {
+          "type": "text",
+          "id": "reviewer_name",
+          "label": "Reviewer Name",
+          "default": "John Doe"
+        }
+      ]
+    }
+  ],
+
+  "max_blocks": 3,
+
+  "presets": [
+    {
+      "name": "Reviews",
+      "blocks": [
+        {
+          "type": "review"
+        },
+        {
+          "type": "review"
+        },
+        {
+          "type": "review"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

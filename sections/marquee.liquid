@@ -20,22 +20,29 @@
   .marquee__wrapper {
     display: flex;
     align-items: center;
+    gap: 100px;
     animation: marquee-slide 60s linear infinite;
   }
 
-  .marquee__item {
+  .marquee__items {
+    height: 52px;
+    width: 96px;
     display: flex;
     align-items: center;
-    gap: 100px;
     flex-shrink: 0;
   }
 
   .marquee__icons {
-    height: 52px;
-    width: 96px;
+    height: 100%;
+    width: 100%;
     object-fit: contain;
     filter: grayscale(100%);
     transition: filter 0.3s ease;
+  }
+
+  .marquee-placeholder__icons {
+    height: 130px;
+    width: 130px;
   }
 
   .marquee__icons:hover {
@@ -44,14 +51,14 @@
 
   @media only screen and (min-width: 768px) {
     .marquee__title {
-    font-size: 16px;
-  }
+      font-size: 16px;
+    }
 
-  .marquee__icons {
-    height: 65px;
-    width: 120px;
+    .marquee__items {
+      height: 65px;
+      width: 120px;
+    }
   }
-}
 
   @keyframes marquee-slide {
     from {
@@ -69,87 +76,81 @@
     <h2 class="marquee__title">{{ section.settings.heading }}</h2>
   </div>
   <div class="marquee__wrapper">
-
     {% for block in section.blocks %}
       {% if block.settings.logo != blank %}
-        <div class="marquee__item">
+        <div class="marquee__items">
           <img
             class="marquee__icons"
             src="{{ block.settings.logo |  image_url: width:  block.settings.logo.width, height: block.settings.logo.height  }}"
             loading="lazy">
         </div>
       {% else %}
-      <div class="marquee__items">
-        {{ 'product-1' | placeholder_svg_tag: "marquee__icons" }}
-      </div>
+        <div class="marquee__items">
+          {{ 'product-1' | placeholder_svg_tag: "marquee-placeholder__icons" }}
+        </div>
       {% endif %}
     {% endfor %}
   </div>
 </div>
 
 {% schema %}
-{
+  {
     "name": "Marquee",
     "tag": "section",
-    "class": "brands",
-    "settings":[
-        {
-            "type": "text",
-            "id": "heading",
-            "label": "Title",
-            "default": "find us in"
-        },
-        {
-            "type": "color",
-            "id": "heading_color",
-            "label": "Heading Text Color",
-            "default": "#333333"
-        }
+    "class": "marquee",
+    "settings": [
+      {
+        "type": "text",
+        "id": "heading",
+        "label": "Title",
+        "default": "Find us in"
+      }, {
+        "type": "color",
+        "id": "heading_color",
+        "label": "Title Text Color",
+        "default": "#333333"
+      }
     ],
     "blocks": [
-        {
-            "type": "brand",
-            "name": "Brand Logo",
-            "settings": [
-                {
-                    "type": "image_picker",
-                    "id": "logo",
-                    "label": "Brand Logo"
-                }
-            ]
-        }
+      {
+        "type": "logo",
+        "name": "Logo",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "logo",
+            "label": "Logo"
+          }
+        ]
+      }
     ],
     "max_blocks": 10,
     "presets": [
-        {
-            "name": "Marquee",
-            "blocks": [
-                {
-                    "type": "brand"
-                },
-                {
-                    "type": "brand"
-                },
-                {
-                    "type": "brand"
-                },
-                {
-                    "type": "brand"
-                },
-                {
-                    "type": "brand"
-                },
-                {
-                    "type": "brand"
-                },
-                {
-                    "type": "brand"
-                },
-                {
-                    "type": "brand"
-                }
-            ]
-        }
+      {
+        "name": "Marquee",
+        "blocks": [
+          {
+            "type": "logo"
+          },
+          {
+            "type": "logo"
+          },
+          {
+            "type": "logo"
+          },
+          {
+            "type": "logo"
+          }, {
+            "type": "logo"
+          }, {
+            "type": "logo"
+          }, {
+            "type": "logo"
+          }, {
+            "type": "logo"
+          }
+        ]
+      }
     ]
-}
+  }
 {% endschema %}
