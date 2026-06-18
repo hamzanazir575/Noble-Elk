@@ -78,6 +78,12 @@
 </style>
 
 <div class="info-cards">
+    <div
+  class="info-cards"
+  {% unless section.settings.background_image != blank %}
+    style="background-color: #515151;"
+  {% endunless %}
+>
   <div class="info-cards__container">
     {% for block in section.blocks %}
       <div class="info-cards__item">
