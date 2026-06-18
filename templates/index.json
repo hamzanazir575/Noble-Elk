@@ -317,35 +317,38 @@
         "button_background_color": "#d3ae5d"
       }
     },
-    "info_cards_PQJdyz": {
+    "info_cards_HqJe7E": {
       "type": "info-cards",
       "blocks": {
-        "card_VrBkAU": {
+        "card_jexh89": {
           "type": "card",
           "settings": {
+            "image": "shopify://shop_images/elk-factory.svg",
             "title": "Direct From The Source",
-            "text": "Write your information here."
+            "text": "We are the farmer and the manufacturer, offering better prices and a higher quality product."
           }
         },
-        "card_9Bg3ja": {
+        "card_YjN6wA": {
           "type": "card",
           "settings": {
-            "title": "Direct From The Source",
-            "text": "Write your information here."
+            "image": "shopify://shop_images/USA-made.svg",
+            "title": "America-First Approach",
+            "text": "Veteran-Owned and Operated. We believe in premium elk products that is farmed right here in the USA."
           }
         },
-        "card_DG8dU7": {
+        "card_TyBBEA": {
           "type": "card",
           "settings": {
-            "title": "Direct From The Source",
-            "text": "Write your information here."
+            "image": "shopify://shop_images/support.svg",
+            "title": "Real Support",
+            "text": "If you have any questions on the product or your order, just give us a call and we will be happy to help."
           }
         }
       },
       "block_order": [
-        "card_VrBkAU",
-        "card_9Bg3ja",
-        "card_DG8dU7"
+        "card_jexh89",
+        "card_YjN6wA",
+        "card_TyBBEA"
       ],
       "name": "Info Cards",
       "settings": {
@@ -365,6 +368,6 @@
     "image_with_text_v2_Jy6Ppz",
     "marquee_T6aPWM",
     "reviews_FWFjRV",
-    "info_cards_PQJdyz"
+    "info_cards_HqJe7E"
   ]
 }
