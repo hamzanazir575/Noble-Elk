@@ -17,6 +17,7 @@
     font-weight: 600;
     margin-bottom: 50px;
     text-align: center;
+    letter-spacing: 0.81px;
     text-transform: uppercase;
   }
 
@@ -43,7 +44,7 @@
   }
 
   .reviews__icon {
-    margin-bottom: 25px;
+    margin-bottom: 24px;
   }
 
   .reviews__info {
@@ -83,20 +84,13 @@
     background-color: #946d16;
   }
 
-  @media screen and (min-width: 768px) {
-    .reviews__inner {
-      flex: 0 0 calc(50% - 15px);
-      max-width: calc(50% - 15px);
-    }
-  }
-
   @media screen and (min-width: 1042px) {
     .reviews__heading {
-      margin-bottom: 98px;
+      margin-bottom: 101px;
     }
 
     .reviews__bg-text {
-      top: 80px;
+      top: 87px;
       font-size: 90.94px;
       line-height: 1.14;
       letter-spacing: 11.86px;
@@ -108,6 +102,13 @@
 
     .reviews__inner {
       max-width: 314px;
+    }
+  }
+
+    @media screen and (min-width: 768px) {
+    .reviews__inner {
+      flex: 0 0 calc(50% - 15px);
+      /* max-width: calc(50% - 15px); */
     }
   }
 </style>
@@ -136,7 +137,8 @@
         {% endif %}
 
         {% if block.settings.review_text != blank %}
-          <p style="{{ block.settings.review_text_color }}" class="reviews__info">
+          <p
+          class="reviews__info" style="color: {{ block.settings.review_text_color }};">
             {{ block.settings.review_text }}
           </p>
         {% endif %}

@@ -1,0 +1,532 @@
+<style>
+  .footer {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-block: 158px 193px;
+  }
+
+  .footer__container {
+    max-width: 1272px;
+    padding-inline: 20px;
+    margin: 0 auto;
+  }
+
+  .footer__top {
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+    margin-bottom: 40px;
+  }
+
+  .footer__subscribe {
+    max-width: 100%;
+  }
+
+  .footer__heading {
+    font-size: 21px;
+    font-weight: 550;
+    text-transform: uppercase;
+  }
+
+  .footer__heading::after {
+    content: '';
+    display: block;
+    width: 20px;
+    height: 4px;
+    margin-top: 10px;
+    background-color: #005b22;
+  }
+
+  .footer__text {
+    font-size: 15px;
+    line-height: 1.5;
+    color: #3a3a3a;
+    margin: -7px 0 60px;
+  }
+
+  .footer__form {
+    display: flex;
+    border-bottom: 1px solid black;
+    align-items: center;
+    gap: 10px;
+    padding-bottom: 10px;
+  }
+
+  .footer__form input {
+    width: 100%;
+    border: none;
+    background: transparent;
+    font-size: 14px;
+    color: #353535;
+  }
+
+  .footer-form__input-icon {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+  }
+
+  .footer__form button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding-right: 14px;
+  }
+
+  .footer__links {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+
+  .footer__column {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .footer__column h3 {
+    font-size: 15px;
+    font-weight: 550;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+    color: #000;
+  }
+
+  .footer__column a {
+    font-size: 14px;
+    text-decoration: none;
+    color: #4b4b4b;
+    padding-bottom: 16px;
+  }
+
+  .footer__social {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 30px;
+  }
+
+  .footer__social a {
+    color: #b28b36;
+  }
+
+  .footer__bottom {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+
+  .footer__copyright,
+  .footer__copyright a {
+    font-size: 13px;
+    text-decoration: none;
+    color: black;
+    line-height: 1.2;
+  }
+
+  .footer__copyright {
+    text-align: center;
+    max-width: 100%;
+  }
+
+  .footer__payments {
+    display: flex;
+    gap: 8px;
+  }
+
+  .footer__payments img {
+    width: 54px;
+    height: 56px;
+  }
+
+  @media screen and (min-width: 1101px) {
+    .footer__top {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    .footer__subscribe {
+      max-width: 410px;
+    }
+
+    .footer__links {
+      flex-wrap: nowrap;
+      gap: 70px;
+    }
+
+    .footer__social {
+      justify-content: flex-start;
+    }
+
+    .footer__bottom {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    .footer__copyright {
+      text-align: left;
+    }
+  }
+</style>
+
+
+<footer 
+  class="footer"
+  {% if section.settings.background_image != blank %}
+    style="background-image: url('{{ section.settings.background_image | image_url }}');"
+  {% endif %}
+>
+
+  <div class="footer__container">
+
+    <div class="footer__top">
+
+
+      <!-- Subscribe Section -->
+      <div class="footer__subscribe">
+
+        <h2 class="footer__heading">
+          {{ section.settings.subscribe_heading }}
+        </h2>
+
+
+        <p class="footer__text">
+          {{ section.settings.subscribe_text }}
+        </p>
+
+
+        {% form 'customer', class: 'footer__form' %}
+
+          <svg 
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            class="footer-form__input-icon"
+            viewBox="0 0 20 16">
+
+            <path 
+              fill="currentColor"
+              d="M20 2c0-1.1-.9-2-2-2H2C.9 0 0 .9 0 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2zm-2 0-8 5-8-5zm0 12H2V4l8 5 8-5z"/>
+
+          </svg>
+
+
+          <input 
+            type="email"
+            name="contact[email]"
+            placeholder="Enter your email"
+            required>
+
+
+          <button type="submit">
+
+            <svg 
+              xmlns="http://www.w3.org/2000/svg"
+              width="12"
+              height="17"
+              viewBox="0 0 12 17"
+              fill="none">
+
+              <path 
+                d="M1.32349 16.3252L10.3251 8.50846L1.32349 0.676761"
+                stroke="#3A3A3A"
+                stroke-width="1.5"/>
+
+            </svg>
+
+          </button>
+
+        {% endform %}
+
+      </div>
+
+
+
+      <!-- Footer Link Columns -->
+      <div class="footer__links">
+
+        {% for block in section.blocks %}
+
+          {% if block.type == 'menu_column' %}
+
+            <div class="footer__column" {{ block.shopify_attributes }}>
+
+              <h3>
+                {{ block.settings.heading }}
+              </h3>
+
+
+              {% if block.settings.menu != blank %}
+
+                {% for link in block.settings.menu.links %}
+
+                  <a href="{{ link.url }}">
+                    {{ link.title }}
+                  </a>
+
+                {% endfor %}
+
+              {% endif %}
+
+            </div>
+
+          {% endif %}
+
+        {% endfor %}
+
+      </div>
+
+    </div>
+
+  <!-- Global Shopify Social Icons -->
+<div class="footer__social">
+
+  {% if settings.social_facebook_link != blank %}
+    <a href="{{ settings.social_facebook_link }}" aria-label="Facebook">
+
+  
+      <svg xmlns="http://www.w3.org/2000/svg" width="12" height="26" fill="none" viewBox="0 0 12 26">
+        <path fill="#d3ae5d" fill-rule="evenodd" d="M11.51.002V4.5c-.844 0-1.656-.01-2.468.003-1.06.016-1.41.385-1.42 1.482-.005.78 0 1.56 0 2.445h3.94l-.462 4.338H7.65V25.5H2.489V12.814H0V8.527h2.469V5.372C2.47 1.718 4.109.024 7.669.004c1.247-.008 2.496-.002 3.84-.002" clip-rule="evenodd"/>
+      </svg>
+
+    </a>
+  {% endif %}
+
+
+  {% if settings.social_x_link != blank %}
+    <a href="{{ settings.social_x_link }}" aria-label="X">
+
+      <!-- X SVG -->
+<svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="none" viewBox="0 0 26 26"><path fill="#d3ae5d" fill-rule="evenodd" d="M22.463 0 14.4 9.358 9.075 1.681 7.908 0H.464L1.63 1.681l8.645 12.463L.492 25.5H2.71l8.556-9.93 5.722 8.249 1.166 1.681h7.444l-1.165-1.681-9.043-13.034L24.683 0zM12.4 14.254l-.99-1.425L3.678 1.68h3.351l6.238 8.992.99 1.427 8.13 11.719h-3.352z" clip-rule="evenodd"/></svg>
+
+    </a>
+  {% endif %}
+
+
+  {% if settings.social_instagram_link != blank %}
+    <a href="{{ settings.social_instagram_link }}" aria-label="Instagram">
+
+      <!-- Instagram SVG -->
+      <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="none" class="tp__social-icon" viewBox="0 0 26 26"><path fill="#d3ae5d" fill-rule="evenodd" d="M23.628 17.907v-.02a64 64 0 0 0 .071-3.657v-.004c0-.471 0-.958.004-1.476-.004-.518-.004-1.005-.004-1.476v-.004c0-1.175 0-2.286-.07-3.657v-.02c-.042-.941-.187-1.727-.431-2.336l-.012-.028-.01-.029a3.9 3.9 0 0 0-.937-1.434l-.021-.02-.021-.022c-.368-.386-.834-.684-1.424-.912l-.008-.004c-.676-.264-1.457-.41-2.322-.434H18.4l-.042-.004c-.774-.05-2.133-.075-4.04-.075l-1.06.002h-.018l-1.06-.002c-1.907 0-3.266.025-4.04.075l-.042.003-.043.001c-.864.024-1.646.17-2.321.434l-.009.004c-.59.228-1.055.526-1.424.912l-.02.022-.021.02c-.431.43-.738.899-.937 1.434l-.01.029-.012.028c-.245.609-.39 1.395-.43 2.336l-.001.02a65 65 0 0 0-.07 3.657v.004c0 .471 0 .958-.005 1.476.004.518.004 1.005.004 1.476v.004c0 1.175 0 2.286.07 3.657l.001.02c.041.941.186 1.727.43 2.336l.012.028.011.03c.2.534.506 1.003.937 1.432l.02.021.021.022c.369.386.834.684 1.424.912l.009.004c.675.264 1.457.41 2.321.434h.043l.042.003c.774.05 2.133.076 4.039.076l1.06-.002h.02l1.06.002c1.907 0 3.265-.025 4.039-.075l.043-.003.042-.001c.865-.024 1.646-.17 2.322-.434l.008-.004c.59-.228 1.056-.526 1.424-.912l.02-.022.022-.02c.43-.43.737-.899.936-1.434l.011-.029.012-.028c.244-.609.39-1.395.43-2.336m2.366-6.383c0 .396 0 .8.004 1.225v.002c-.004.515-.004 1-.004 1.476 0 1.202 0 2.347-.073 3.779-.049 1.13-.225 2.175-.595 3.094a6.2 6.2 0 0 1-1.468 2.26q-.907.948-2.257 1.469-1.393.545-3.095.59c-1.056.07-2.917.088-5.257.079-2.34.01-4.2-.01-5.257-.078q-1.701-.047-3.094-.591-1.351-.52-2.257-1.47A6.2 6.2 0 0 1 1.172 21.1c-.37-.919-.546-1.965-.594-3.094-.074-1.435-.074-2.58-.074-3.784v-.246c0-.396 0-.8-.004-1.225v-.002c.005-.516.004-1 .004-1.476 0-1.202 0-2.347.074-3.778.048-1.13.224-2.177.594-3.095a6.2 6.2 0 0 1 1.469-2.26q.906-.948 2.257-1.469Q6.29.126 7.992.081C9.048.01 10.91-.008 13.25.001c2.34-.01 4.201.01 5.257.078q1.701.047 3.095.591 1.35.52 2.257 1.469a6.2 6.2 0 0 1 1.468 2.26c.37.918.546 1.965.595 3.095.074 1.434.073 2.58.073 3.783zm-5.94-7.11a1.53 1.53 0 1 0 0 3.06 1.53 1.53 0 0 0 0-3.06M13.25 16.999A4.255 4.255 0 0 1 9 12.749a4.255 4.255 0 0 1 4.25-4.25 4.255 4.255 0 0 1 4.25 4.25 4.255 4.255 0 0 1-4.25 4.25m0-10.796a6.545 6.545 0 1 0 0 13.09 6.545 6.545 0 0 0 0-13.09" clip-rule="evenodd"/></svg>
+
+    </a>
+  {% endif %}
+
+
+  {% if settings.social_tiktok_link != blank %}
+    <a href="{{ settings.social_tiktok_link }}" aria-label="TikTok">
+
+      <!-- TikTok SVG -->
+     <svg xmlns="http://www.w3.org/2000/svg" width="23" height="26" fill="none" class="tp__social-icon" viewBox="0 0 23 26"><mask id="mask0_0_3147" width="23" height="26" x="0" y="0" maskUnits="userSpaceOnUse" style="mask-type:luminance"><path fill="#fff" fill-rule="evenodd" d="M.5 0h22.29v25.5H.5z" clip-rule="evenodd"/></mask><g mask="url(#mask0_0_3147)"><path fill="#d3ae5d" fill-rule="evenodd" d="M22.79 6.102v4.393a10.46 10.46 0 0 1-6.107-1.959v8.885c0 3.128-1.79 5.847-4.4 7.189a8.05 8.05 0 0 1-3.691.89C4.13 25.5.5 21.875.5 17.42s3.63-8.08 8.092-8.08q.564 0 1.108.077v4.486a3.69 3.69 0 0 0-4.799 3.518 3.69 3.69 0 0 0 3.69 3.686 3.69 3.69 0 0 0 3.691-3.686V0h4.401v.002c0 3.369 2.735 6.1 6.108 6.1" clip-rule="evenodd"/></g></svg>
+
+    </a>
+  {% endif %}
+
+
+  {% if settings.social_youtube_link != blank %}
+    <a href="{{ settings.social_youtube_link }}" aria-label="YouTube">
+
+      <!-- YouTube SVG -->
+      <svg xmlns="http://www.w3.org/2000/svg" width="28" height="20" fill="none" class="tp__social-icon" viewBox="0 0 28 20"><path fill="#d3ae5d" fill-rule="evenodd" d="M11.084 13.724V5.776l6.999 3.974zm15.567-10.45A3.36 3.36 0 0 0 24.284.898C22.389.41 17.566.385 13.824.334h-.001C11.95.36 9.81.38 7.9.453s-3.59.2-4.538.444A3.36 3.36 0 0 0 .995 3.275C.62 4.495.435 7.763.435 9.75s.186 5.255.56 6.475c.22.847.922 1.978 2.367 2.378 1.895.486 6.718.512 10.46.563h.001c1.871-.026 4.013-.045 5.923-.119 1.91-.073 3.59-.2 4.538-.444a3.35 3.35 0 0 0 2.367-2.378c.374-1.22.56-4.488.56-6.475s-.186-5.255-.56-6.475" clip-rule="evenodd"/></svg>
+
+    </a>
+  {% endif %}
+
+</div>
+   
+
+
+
+    <!-- Footer Bottom -->
+    <div class="footer__bottom">
+
+
+      <!-- Copyright and Policy Links -->
+      <div class="footer__copyright">
+
+        {{ section.settings.copyright_text }}
+
+
+        {% if section.settings.privacy_link != blank %}
+
+          <a href="{{ section.settings.privacy_link }}">
+            Privacy Policy |
+          </a>
+
+        {% endif %}
+
+
+        {% if section.settings.shipping_link != blank %}
+
+          <a href="{{ section.settings.shipping_link }}">
+            Shipping & Returns
+          </a>
+
+        {% endif %}
+
+      </div>
+
+
+
+      <!-- Payment Icons -->
+      <div class="footer__payments">
+
+
+        {% for block in section.blocks %}
+
+          {% if block.type == 'payment_icon' %}
+
+            {% if block.settings.payment_image != blank %}
+
+              {{
+                block.settings.payment_image
+                | image_url: width: 60
+                | image_tag:
+                loading: 'lazy',
+                alt: block.settings.payment_name
+              }}
+
+            {% endif %}
+
+
+          {% endif %}
+
+        {% endfor %}
+
+
+      </div>
+
+
+    </div>
+
+
+  </div>
+
+</footer>
+    
+{% schema %}
+{
+  "name": "Noble Elk Footer",
+  "tag": "section",
+  "class": "footer-section",
+
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "background_image",
+      "label": "Background Image"
+    },
+
+    {
+      "type": "text",
+      "id": "subscribe_heading",
+      "label": "Subscribe Heading",
+      "default": "Subscribe"
+    },
+
+    {
+      "type": "textarea",
+      "id": "subscribe_text",
+      "label": "Subscribe Text",
+      "default": "Enter your email below to stay up to date on new products, promotions, and updates on the farm!"
+    },
+
+    {
+      "type": "textarea",
+      "id": "copyright_text",
+      "label": "Copyright Text",
+      "default": "© 2025 All Rights Reserved. Noble Elk Farm™ is a registered trademark of Nobile Inc. |"
+    },
+
+    {
+      "type": "url",
+      "id": "privacy_link",
+      "label": "Privacy Policy Link"
+    },
+
+    {
+      "type": "url",
+      "id": "shipping_link",
+      "label": "Shipping & Returns Link"
+    }
+  ],
+
+  "blocks": [
+
+    {
+      "type": "menu_column",
+      "name": "Footer Menu Column",
+      "settings": [
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Column Heading",
+          "default": "Shop"
+        },
+
+        {
+          "type": "link_list",
+          "id": "menu",
+          "label": "Select Menu"
+        }
+      ]
+    },
+
+    {
+      "type": "payment_icon",
+      "name": "Payment Icon",
+      "settings": [
+
+        {
+          "type": "image_picker",
+          "id": "payment_image",
+          "label": "Payment Icon Image"
+        },
+
+        {
+          "type": "text",
+          "id": "payment_name",
+          "label": "Payment Name",
+          "default": "Visa"
+        }
+
+      ]
+    }
+
+  ],
+
+  "presets": [
+    {
+      "name": "Noble Elk Footer",
+      "blocks": [
+
+        {
+          "type": "menu_column"
+        },
+        {
+          "type": "menu_column"
+        },
+        {
+          "type": "menu_column"
+        },
+
+        {
+          "type": "payment_icon"
+        },
+        {
+          "type": "payment_icon"
+        },
+        {
+          "type": "payment_icon"
+        },
+        {
+          "type": "payment_icon"
+        }
+
+      ]
+    }
+  ]
+}
+{% endschema %}

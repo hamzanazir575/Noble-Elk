@@ -5,12 +5,14 @@
 
   .faq-container {
     display: flex;
+    flex-direction: column;
     align-items: normal;
     gap: 78px;
   }
 
-  .faq-image {
-    width: 50%;
+  .faq-image,
+  .faq-content {
+    width: 100%;
   }
 
   .faq-image img {
@@ -21,8 +23,10 @@
   }
 
   .faq-content {
-    width: 50%;
-    padding: 154px 40px;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 
   .faq-heading {
@@ -35,6 +39,7 @@
     margin-bottom: 49px;
     padding-bottom: 27px;
     position: relative;
+    line-height: 1.8;
   }
 
   .faq-heading::after {
@@ -49,8 +54,7 @@
 
   .faq-item {
     border-bottom: 1px solid #dddddd;
-    padding-bottom: 20px;
-    line-height: 1.8;
+    margin-bottom: 18px;
   }
 
   .faq-question {
@@ -67,14 +71,13 @@
     padding: 28px 0 18px 0;
     margin: 0;
     color: #1c1c1c;
+    line-height: 1.8;
   }
 
   .faq-icon {
     color: #b38622;
-    font-size: 42px;
-    font-weight: 300;
-    line-height: 1;
-    flex-shrink: 0;
+    width: 17px;
+    height: 17px;
   }
 
   .faq-answer {
@@ -88,6 +91,7 @@
     margin-bottom: 18px;
     font-size: 14px;
     color: #444;
+    line-height: 1.8;
   }
 
   .faq-item.active .faq-answer {
@@ -101,7 +105,6 @@
     text-decoration: none;
     font-size: 14px;
     font-weight: 650;
-    text-align: center;
     transition: color 0.3s ease;
     display: inline-block;
     margin-top: 75px;
@@ -111,31 +114,20 @@
     color: #946d16;
   }
 
-  @media screen and (min-width: 1117px) {
-  .faq-container {
-    align-items: center;
-  }
-}
-
-  @media screen and (max-width: 992px) {
+  @media screen and (min-width: 993px) {
     .faq-container {
-      flex-direction: column;
+      flex-direction: row;
     }
 
     .faq-image,
     .faq-content {
-      width: 100%;
+      width: 50%;
     }
 
     .faq-content {
-      padding: 40px 20px;
-    }
-
-    .faq-heading {
-      margin-bottom: 60px;
+      padding: 154px 40px;
     }
   }
-
 </style>
 
 <div class="faq">
@@ -166,9 +158,14 @@
             </h3>
             <span class="faq-icon">
               {% if forloop.first %}
-                −
-              {% else %}
-                +
+                  <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect y="8" width="17" height="2" fill="#A77E24"></rect>
+                  </svg>
+                {% else %}
+                  <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect y="8" width="17" height="2" fill="#A77E24"></rect>
+                    <rect x="9" width="17" height="2" transform="rotate(90 9 0)" fill="#A77E24"></rect>
+                  </svg>
               {% endif %}
             </span>
           </div>
@@ -183,6 +180,9 @@
       {% if section.settings.button_label != blank and section.settings.button_link != blank %}
         <a class="faq-button" href="{{ section.settings.button_link }}">
           {{ section.settings.button_label }}
+          <svg width="8" height="11" viewBox="0 0 8 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1.71655 1.02827L6.20636 5.94764L1.71655 10.2404" stroke="currentColor" stroke-width="2"></path>
+          </svg>
         </a>
       {% endif %}
 
@@ -191,10 +191,19 @@
 </div>
 
 <script>
-  document.querySelectorAll('.faq-item').forEach(function(item) {
-    item.classList.remove('active')
-    item.querySelector('.faq-icon').textContent = '+'
-  });
+
+  const plusIcon = `
+  <svg width="17" height="17" viewBox="0 0 17 17" fill="none">
+    <rect y="8" width="17" height="2" fill="#A77E24"></rect>
+    <rect x="9" width="17" height="2" transform="rotate(90 9 0)" fill="#A77E24"></rect>
+  </svg>
+`;
+
+const minusIcon = `
+  <svg width="17" height="17" viewBox="0 0 17 17" fill="none">
+    <rect y="8" width="17" height="2" fill="#A77E24"></rect>
+  </svg>
+`;
 
   document.querySelectorAll(".faq-question").forEach(function(question) {
 
@@ -204,10 +213,10 @@
 
       if (item.classList.contains("active")) {
         item.classList.remove("active");
-        icon.textContent = "+";
+        icon.innerHTML = plusIcon;
       } else {
         item.classList.add("active");
-        icon.textContent = "−";
+        icon.innerHTML = minusIcon;
       }
 
     });
