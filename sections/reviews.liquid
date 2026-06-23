@@ -48,6 +48,7 @@
   }
 
   .reviews__info {
+    color: {{ section.settings.review_text_color }};
     margin: 0 0 25px;
     font-size: 15px;
     font-weight: 400;
@@ -137,7 +138,7 @@
 
         {% if block.settings.review_text != blank %}
           <p
-          class="reviews__info" style="color: {{ block.settings.review_text_color }};">
+          class="reviews__info">
             {{ block.settings.review_text }}
           </p>
         {% endif %}
@@ -176,6 +177,12 @@
         "type": "color",
         "id": "heading_color",
         "label": "Heading Color",
+        "default": "#1C1C1C"
+      },
+      {
+        "type": "color",
+        "id": "review_text_color",
+        "label": "Review Text Color",
         "default": "#1C1C1C"
       },
       {
@@ -229,12 +236,6 @@
             "id": "review_text",
             "label": "Review Text",
             "default": "Write your customer review here."
-          },
-          {
-            "type": "color",
-            "id": "review_text_color",
-            "label": "Review Text Color",
-            "default": "#161616"
           },
           {
             "type": "text",

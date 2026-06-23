@@ -27,6 +27,7 @@
     font-size: 21px;
     font-weight: 550;
     text-transform: uppercase;
+    margin-top: 0;
   }
 
   .footer__heading::after {
@@ -50,7 +51,7 @@
     border-bottom: 1px solid black;
     align-items: center;
     gap: 10px;
-    padding-bottom: 10px;
+    padding-bottom: 14px;
   }
 
   .footer__form input {
@@ -58,7 +59,8 @@
     border: none;
     background: transparent;
     font-size: 14px;
-    color: #353535;
+    opacity: 0.6;
+    letter-spacing: 1px;
   }
 
   .footer-form__input-icon {
@@ -90,7 +92,7 @@
     font-size: 15px;
     font-weight: 550;
     text-transform: uppercase;
-    margin-bottom: 16px;
+    margin: 0 0 16px 0;
     color: #000;
   }
 
@@ -137,9 +139,9 @@
     gap: 8px;
   }
 
-  .footer__payments img {
-    width: 54px;
-    height: 56px;
+  .footer__payments svg {
+    width: 56px;
+    height: 33px;
   }
 
   @media screen and (min-width: 1101px) {
@@ -159,6 +161,7 @@
 
     .footer__social {
       justify-content: flex-start;
+      gap: 23px;
     }
 
     .footer__bottom {
@@ -168,6 +171,11 @@
 
     .footer__copyright {
       text-align: left;
+      color: #3a3a3a;
+    }
+
+    .footer__copyright a {
+      color: #3a3a3a;
     }
   }
 </style>
@@ -214,6 +222,7 @@
 
 
           <input 
+            class="footer__email"
             type="email"
             name="contact[email]"
             placeholder="Enter your email"
@@ -295,8 +304,8 @@
   {% endif %}
 
 
-  {% if settings.social_x_link != blank %}
-    <a href="{{ settings.social_x_link }}" aria-label="X">
+  {% if settings.social_twitter_link != blank %}
+    <a href="{{ settings.social_twitter_link }}" aria-label="X">
 
       <!-- X SVG -->
 <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="none" viewBox="0 0 26 26"><path fill="#d3ae5d" fill-rule="evenodd" d="M22.463 0 14.4 9.358 9.075 1.681 7.908 0H.464L1.63 1.681l8.645 12.463L.492 25.5H2.71l8.556-9.93 5.722 8.249 1.166 1.681h7.444l-1.165-1.681-9.043-13.034L24.683 0zM12.4 14.254l-.99-1.425L3.678 1.68h3.351l6.238 8.992.99 1.427 8.13 11.719h-3.352z" clip-rule="evenodd"/></svg>
@@ -371,32 +380,14 @@
 
 
       <!-- Payment Icons -->
-      <div class="footer__payments">
 
+        <div class="footer__payments">
+          {{ 'visa' | payment_type_svg_tag }}
+          {{ 'master' | payment_type_svg_tag }}
+          {{ 'american_express' | payment_type_svg_tag }}
+          {{ 'paypal' | payment_type_svg_tag }}
+        </div>
 
-        {% for block in section.blocks %}
-
-          {% if block.type == 'payment_icon' %}
-
-            {% if block.settings.payment_image != blank %}
-
-              {{
-                block.settings.payment_image
-                | image_url: width: 60
-                | image_tag:
-                loading: 'lazy',
-                alt: block.settings.payment_name
-              }}
-
-            {% endif %}
-
-
-          {% endif %}
-
-        {% endfor %}
-
-
-      </div>
 
 
     </div>
@@ -474,26 +465,26 @@
       ]
     },
 
-    {
-      "type": "payment_icon",
-      "name": "Payment Icon",
-      "settings": [
+    // {
+    //   "type": "payment_icon",
+    //   "name": "Payment Icon",
+    //   "settings": [
 
-        {
-          "type": "image_picker",
-          "id": "payment_image",
-          "label": "Payment Icon Image"
-        },
+    //     {
+    //       "type": "image_picker",
+    //       "id": "payment_image",
+    //       "label": "Payment Icon Image"
+    //     },
 
-        {
-          "type": "text",
-          "id": "payment_name",
-          "label": "Payment Name",
-          "default": "Visa"
-        }
+    //     {
+    //       "type": "text",
+    //       "id": "payment_name",
+    //       "label": "Payment Name",
+    //       "default": "Visa"
+    //     }
 
-      ]
-    }
+    //   ]
+    // }
 
   ],
 
@@ -512,18 +503,18 @@
           "type": "menu_column"
         },
 
-        {
-          "type": "payment_icon"
-        },
-        {
-          "type": "payment_icon"
-        },
-        {
-          "type": "payment_icon"
-        },
-        {
-          "type": "payment_icon"
-        }
+        // {
+        //   "type": "payment_icon"
+        // },
+        // {
+        //   "type": "payment_icon"
+        // },
+        // {
+        //   "type": "payment_icon"
+        // },
+        // {
+        //   "type": "payment_icon"
+        // }
 
       ]
     }

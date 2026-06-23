@@ -1,35 +1,31 @@
 <style>
-  .faq {
+  .faqs {
     background-color: #f8f6f1;
   }
 
-  .faq-container {
+  .faqs-container {
     display: flex;
     flex-direction: column;
     align-items: normal;
     gap: 78px;
   }
 
-  .faq-image,
-  .faq-content {
-    width: 100%;
-  }
-
-  .faq-image img {
+  .faqs-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     display: block;
   }
 
-  .faq-content {
+  .faqs-content {
+    width: 100%;
     padding: 40px 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
   }
 
-  .faq-heading {
+  .faqs-heading {
     font-size: 21px;
     font-weight: 550;
     letter-spacing: 0.81px;
@@ -42,7 +38,7 @@
     line-height: 1.8;
   }
 
-  .faq-heading::after {
+  .faqs-heading::after {
     content: "";
     width: 47px;
     height: 4px;
@@ -52,19 +48,19 @@
     bottom: 0;
   }
 
-  .faq-item {
+  .faqs-item {
     border-bottom: 1px solid #dddddd;
     margin-bottom: 18px;
   }
 
-  .faq-question {
+  .faqs-question {
     display: flex;
     justify-content: space-between;
     align-items: center;
     cursor: pointer;
   }
 
-  .faq-question h3 {
+  .faqs-question h3 {
     font-size: 15px;
     font-weight: 650;
     text-transform: uppercase;
@@ -74,31 +70,31 @@
     line-height: 1.8;
   }
 
-  .faq-icon {
+  .faqs-icon {
     color: #b38622;
     width: 17px;
     height: 17px;
   }
 
-  .faq-answer {
+  .faqs-answer {
     max-height: 0;
     width: 100%;
     overflow: hidden;
     transition: max-height .4s ease;
   }
 
-  .faq-answer p {
+  .faqs-answer p {
     margin-bottom: 18px;
     font-size: 14px;
     color: #444;
     line-height: 1.8;
   }
 
-  .faq-item.active .faq-answer {
+  .faqs-item.active .faqs-answer {
     max-height: 300px;
   }
 
-  .faq-button {
+  .faqs-button {
     color: {{ section.settings.btn_font_color }};
     text-transform: uppercase;
     padding-block: 14px;
@@ -110,29 +106,29 @@
     margin-top: 75px;
   }
 
-  .faq-button:hover {
+  .faqs-button:hover {
     color: #946d16;
   }
 
   @media screen and (min-width: 993px) {
-    .faq-container {
+    .faqs-container {
       flex-direction: row;
     }
 
-    .faq-image,
-    .faq-content {
+    .faqs-image,
+    .faqs-content {
       width: 50%;
     }
 
-    .faq-content {
+    .faqs-content {
       padding: 154px 40px;
     }
   }
 </style>
 
-<div class="faq">
-  <div class="faq-container">
-    <div class="faq-image">
+<div class="faqs">
+  <div class="faqs-container">
+    <div class="faqs-image">
       {% if section.settings.image != blank %}
         <img 
           src="{{ section.settings.image | image_url: width: section.settings.image.width, height: section.settings.image.height }}"
@@ -142,21 +138,21 @@
             {{ 'product-1' | placeholder_svg_tag }}
       {% endif %}
     </div>
-    <div class="faq-content">
+    <div class="faqs-content">
       {% if section.settings.heading != blank %}
-        <h2 class="faq-heading">
+        <h2 class="faqs-heading">
           {{ section.settings.heading }}
         </h2>
       {% endif %}
 
       {% for block in section.blocks %}
-        <div class="faq-item {% if forloop.first %}active{% endif %}" 
-             {{ block.shopify_attributes }}>
-          <div class="faq-question">
+        <div class="faqs-item {% if forloop.first %}active{% endif %}" 
+             >
+          <div class="faqs-question">
             <h3>
               {{ block.settings.question }}
             </h3>
-            <span class="faq-icon">
+            <span class="faqs-icon">
               {% if forloop.first %}
                   <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <rect y="8" width="17" height="2" fill="#A77E24"></rect>
@@ -169,7 +165,7 @@
               {% endif %}
             </span>
           </div>
-          <div class="faq-answer">
+          <div class="faqs-answer">
             <p>
               {{ block.settings.answer }}
             </p>
@@ -178,7 +174,7 @@
       {% endfor %}
 
       {% if section.settings.button_label != blank and section.settings.button_link != blank %}
-        <a class="faq-button" href="{{ section.settings.button_link }}">
+        <a class="faqs-button" href="{{ section.settings.button_link }}">
           {{ section.settings.button_label }}
           <svg width="8" height="11" viewBox="0 0 8 11" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M1.71655 1.02827L6.20636 5.94764L1.71655 10.2404" stroke="currentColor" stroke-width="2"></path>
@@ -205,11 +201,11 @@ const minusIcon = `
   </svg>
 `;
 
-  document.querySelectorAll(".faq-question").forEach(function(question) {
+  document.querySelectorAll(".faqs-question").forEach(function(question) {
 
     question.addEventListener("click", function() {
       const item = this.parentElement;
-      const icon = this.querySelector(".faq-icon");
+      const icon = this.querySelector(".faqs-icon");
 
       if (item.classList.contains("active")) {
         item.classList.remove("active");
@@ -227,13 +223,13 @@ const minusIcon = `
 {
   "name": "FAQs",
   "tag": "section",
-  "class": "faq",
+  "class": "faqs",
 
   "settings": [
     {
       "type": "image_picker",
       "id": "image",
-      "label": "FAQ Image"
+      "label": "Image"
     },
 
     {
