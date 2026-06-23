@@ -11,46 +11,6 @@
   "name": "t:sections.footer.name",
   "type": "footer",
   "sections": {
-    "footer_v1_MHA3Jc": {
-      "type": "footer-v1",
-      "blocks": {
-        "menu_column_xQjbQB": {
-          "type": "menu_column",
-          "settings": {
-            "heading": "Shop",
-            "menu": "footer-shop-menu"
-          }
-        },
-        "menu_column_pFUyKw": {
-          "type": "menu_column",
-          "settings": {
-            "heading": "Learn",
-            "menu": "footer-learn-emnu"
-          }
-        },
-        "menu_column_6EP3Ce": {
-          "type": "menu_column",
-          "settings": {
-            "heading": "Our Company",
-            "menu": "our-company-menu"
-          }
-        }
-      },
-      "block_order": [
-        "menu_column_xQjbQB",
-        "menu_column_pFUyKw",
-        "menu_column_6EP3Ce"
-      ],
-      "name": "Footer V1",
-      "settings": {
-        "background_image": "shopify://shop_images/footer-bg.webp",
-        "subscribe_heading": "Subscribe",
-        "subscribe_text": "Enter your email below to stay up to date on new products, promotions, and updates on the farm!",
-        "copyright_text": "©2025 All Rights Reserved. Noble Elk Farm™ is a registered trademark of Noble Inc. |",
-        "privacy_link": "shopify://policies/privacy-policy",
-        "shipping_link": "shopify://policies/shipping-policy"
-      }
-    },
     "footer": {
       "type": "footer",
       "blocks": {
@@ -106,7 +66,6 @@
     }
   },
   "order": [
-    "footer_v1_MHA3Jc",
     "footer"
   ]
 }
